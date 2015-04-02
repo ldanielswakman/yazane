@@ -1,0 +1,29 @@
+{
+  "name": "yazane",
+  "version": "0.0.1",
+  "homepage": "http://yazane.com.tr",
+  "authors": [
+    "L Daniel Swakman <hello@ldaniel.eu>",
+    "Jay McAliley <jay@logicleague.com>"
+  ],
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "modernizr": "2.8.2",
+    "jquery": "1.11.1",
+    "bootstrap": "3.2.0",
+    "respond": "1.4.2",
+    "ionicons": "~2.0.0",
+    "jquery.smooth-scroll": "~1.5.4",
+    "tinycarousel": "*",
+    "isotope": "~2.1.0"
+  },
+  "resolutions": {
+    "jquery": "1.11.1"
+  }
+}

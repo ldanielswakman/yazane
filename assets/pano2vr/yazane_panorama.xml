@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node8">
+  <panorama id="node8" hideabout="1">
+    <view fovmode="0" pannorth="122.5">
+      <start pan="0" fov="70" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Yazane Giris" datetime="2014:08:29 18:06:30" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Danisma" target="21/-1/65" pan="-110.065" skinid="" url="{node3}" id="Point01" tilt="-5.05749"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9668+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node3" hideabout="1">
+    <view fovmode="0" pannorth="131">
+      <start pan="0" fov="70" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Danisma" datetime="2014:08:29 18:00:20" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Yazane Giris" target="260/3/65" pan="167.101" skinid="" url="{node8}" id="Point01" tilt="-11.5414"/>
+      <hotspot title="Orta" target="218/-8/65" pan="12.4835" skinid="" url="{node2}" id="Point02" tilt="-8.904260000000001"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9584+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node2" hideabout="1">
+    <view fovmode="0" pannorth="129.5">
+      <start pan="0" fov="70" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Orta" datetime="2014:08:29 18:01:21" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Danisma" target="13/-4/65" pan="173.068" skinid="" url="{node3}" id="Point01" tilt="-2.30195"/>
+      <hotspot title="Sol" target="31.5/-3.5/65" pan="98.63079999999999" skinid="" url="{node7}" id="Point02" tilt="-5.78535"/>
+      <hotspot title="Sag" target="62/-1/65" pan="-26.2473" skinid="" url="{node9}" id="Point03" tilt="-7.55281"/>
+      <hotspot title="Mutfak" target="202.5/-8/65" pan="-119.462" skinid="" url="{node6}" id="Point04" tilt="-1.05049"/>
+      <hotspot title="Toplanti Salonu" target="304.5/-24.5/65" pan="140.868" skinid="" url="{node5}" id="Point06" tilt="-1.01264"/>
+      <hotspot title="Oda" target="18.5/-1.5/65" pan="-48.4623" skinid="" url="{node10}" id="Point05" tilt="-3.18621"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9560+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node7" hideabout="1">
+    <view fovmode="0" pannorth="221">
+      <start pan="0" fov="70" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Sol" datetime="2014:08:29 21:49:31" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Orta" target="138.5/-6.5/65" pan="12.033" skinid="" url="{node2}" id="Point01" tilt="-10.644"/>
+      <hotspot title="Toplanti Salonu" target="305/-16/65" pan="-105.131" skinid="" url="{node5}" id="Point02" tilt="-3.69959"/>
+      <hotspot title="Danisma" target="19.5/-2.5/65" pan="-45.4973" skinid="" url="{node3}" id="Point03" tilt="-7.53076"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9650+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node9" hideabout="1">
+    <view fovmode="0" pannorth="52.5">
+      <start pan="0" fov="70" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Sag" datetime="2014:08:28 18:59:55" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Mutfak" target="211.5/-6.5/65" pan="110.641" skinid="" url="{node6}" id="Point02" tilt="-3.13065"/>
+      <hotspot title="Orta" target="307/-0.5/65" pan="85.09569999999999" skinid="" url="{node2}" id="Point03" tilt="-6.8104"/>
+      <hotspot title="Sol" target="29.5/1/65" pan="53.4958" skinid="" url="{node7}" id="Point04" tilt="-0.729214"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9545+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node6" hideabout="1">
+    <view fovmode="0" pannorth="226">
+      <start pan="0" fov="70" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Mutfak" datetime="2014:08:29 18:05:32" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Orta" target="241/-2/65" pan="98.0322" skinid="" url="{node2}" id="Point01" tilt="-8.054040000000001"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9632+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node5" hideabout="1">
+    <view fovmode="0" pannorth="216.5">
+      <start pan="294" fov="80" tilt="-15.5"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="80" tilt="90"/>
+    </view>
+    <userdata title="Toplanti Salonu" datetime="2014:08:28 22:35:29" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Orta" target="159.5/-6.5/65" pan="38.2292" skinid="" url="{node2}" id="Point01" tilt="-8.440060000000001"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9614+Panorama_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+  <panorama id="node10" hideabout="1">
+    <view fovmode="0" pannorth="44">
+      <start pan="0" fov="85" tilt="0"/>
+      <min pan="0" fov="45" tilt="-90"/>
+      <max pan="360" fov="85" tilt="90"/>
+    </view>
+    <userdata title="Oda" datetime="2014:09:04 13:58:41" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="28.98206502199173" latitude="41.02541641453625"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="Orta" target="312/1/65" pan="-2.45518" skinid="" url="{node2}" id="Point01" tilt="-6.50619"/>
+    </hotspots>
+    <media/>
+    <input tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_0.jpg" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_5.jpg" tilesize="1920" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_1.jpg"/>
+    <altinput tile0url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_400_0.jpg" screensize="800" tile5url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_400_5.jpg" tilesize="400" tile4url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_400_4.jpg" tile3url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_400_3.jpg" tilescale="1.005208333333333" tile2url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_400_2.jpg" tile1url="https://s3-eu-west-1.amazonaws.com/yazane-logicleague/panorama/IMG_9s949+Panorama+copy_o_400_1.jpg"/>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="1" returntohorizon="0.000" delay="15.00"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="1" lockedwheel="0" invertcontrol="0" speedwheel="1.5" sensitivity="10"/>
+  </panorama>
+</tour>
