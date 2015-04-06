@@ -20,9 +20,7 @@
     <p>Are you interested in more info about Yazane, or want to join us as a coworker? Contact us here.</p>
   </div>
   <div class="col-xs-12">
-    <form class="u-mt40">
-      <?php echo do_shortcode( '[contact-form-7 id="139" title="Contact Us"]' ); ?>
-    </form>
+    <?php echo do_shortcode( '[contact-form-7 id="139" title="Contact Us"]' ); ?>
   </div>
 </dialog>
 
@@ -34,9 +32,7 @@
     <p>Do you want to use one of Yazane's excellent spaces for one of your events? Inquire here for more information.</p>
   </div>
   <div class="col-xs-12">
-    <form class="u-mt40">
-      <?php echo do_shortcode( '[contact-form-7 id="154" title="Host an Event"]' ); ?>
-    </form>
+    <?php echo do_shortcode( '[contact-form-7 id="154" title="Host an Event"]' ); ?>
   </div>
 </dialog>
 
