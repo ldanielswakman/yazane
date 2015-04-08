@@ -17,25 +17,23 @@ function send_smtp_email( $phpmailer ) {
 	$phpmailer->isSMTP();
 
 	// The hostname of the mail server
-	$phpmailer->Host = "smtp-relay.gmail.com";
+	$phpmailer->Host = "smtp.yandex.com";
 
 	// Use SMTP authentication (true|false)
-	$phpmailer->SMTPAuth = false;
+	$phpmailer->SMTPAuth = true;
 
 	// SMTP port number - likely to be 25, 465 or 587
-	$phpmailer->Port = "25";
+	$phpmailer->Port = "465";
 
-/*
 	// Username to use for SMTP authentication
-	$phpmailer->Username = "yourusername";
+	$phpmailer->Username = YAZANE_EMAIL_ADDRESS;
 
 	// Password to use for SMTP authentication
-	$phpmailer->Password = "yourpassword";
-*/
+	$phpmailer->Password = YAZANE_EMAIL_PASSWORD;
 
 	// Encryption system to use - ssl or tls
-	$phpmailer->SMTPSecure = "tls";
+	$phpmailer->SMTPSecure = "ssl";
 
-	$phpmailer->From = "info@logicleague.com";
+	$phpmailer->From = YAZANE_EMAIL_ADDRESS;
 	$phpmailer->FromName = "Yazane";
 }
