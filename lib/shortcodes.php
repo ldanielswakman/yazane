@@ -35,7 +35,7 @@ function coworkers_preview_shortcode( $atts, $content = null ) {
     $result .= '  </div>';
   }
   $result .= '    <div class="col-xs-12 actions u-mt40 u-aligncenter">';
-  $result .= '      <a href="/members/" class="btn u-ma5">see all members</a>';
+  $result .= '      <a href="' . home_url('/members') . '" class="btn u-ma5">see all members</a>';
   $result .= '    </div>';
   $result .= '  </div>';
   $result .= '</section>';
