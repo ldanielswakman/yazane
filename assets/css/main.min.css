@@ -5469,6 +5469,7 @@ nav .menu li[class*="ion-"]:hover:before {
 }
 nav .menu a:hover, nav .menu a:focus {
   background-color: #7dadbc;
+  color: #fff;
 }
 nav.isExpanded {
   -webkit-transform: translateX(0);
@@ -5672,7 +5673,7 @@ aside .lang-switcher a:hover {
 }
 #inbetween1 {
   min-height: 80vh;
-  background-image: url('../img/background-space.png');
+  background-image: url('../img/background-space.jpg');
 }
 #events {
   background-color: #fff;
