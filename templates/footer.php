@@ -28,3 +28,12 @@
     </div>
   </div>
 </footer>
+
+<footer id="colophon">
+  <div class="row u-pv40 u-aligncenter">
+    <div class="col-xs-10 col-xs-offset-1">
+      Built by <a href="http://www.ldaniel.eu/" target="_blank">L. Daniel Swakman</a> with <a href="http://logicleague.com/" target="_blank">Jay McAliley</a> and <a href="http://www.wordpress.org/" target="_blank">Wordpress</a>.
+    </div>
+  </div>
+
+</footer>

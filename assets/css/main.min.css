@@ -5403,6 +5403,12 @@ dialog#coworker_detail .coworker-image {
 dialog#coworker_detail .coworker-image img {
   max-width: 150px;
 }
+@media (max-width:768px) {
+  dialog#coworker_detail .coworker-description {
+    max-height: 55vh;
+    overflow: scroll;
+  }
+}
 .parallax {
   -webkit-background-size: cover;
   background-size: cover;
@@ -5676,7 +5682,25 @@ aside .lang-switcher a:hover {
   background-image: url('../img/background-event.jpg');
 }
 #coworkers .coworker {
-  height: 100px;
+  height: 120px;
+}
+@media (max-width:768px) {
+  #coworkers .coworker {
+    height: 140px;
+    text-align: center;
+  }
+  #coworkers .coworker .coworker-image {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+  #coworkers .coworker h4 {
+    margin-top: 10px;
+  }
+  #coworkers .coworker p {
+    max-height: 40px;
+    overflow: hidden;
+  }
 }
 .coworker-image {
   display: inline-block;
@@ -5715,6 +5739,16 @@ aside .lang-switcher a:hover {
 #contact {
   background-color: #666671;
   color: #fff;
+}
+#colophon {
+  background-color: #4e4e57;
+  color: #999;
+}
+#colophon a {
+  color: #7dadbc;
+}
+#colophon a:hover, #colophon a:focus {
+  color: #588c99;
 }
 #page-hero {
   min-height: 40vh;
@@ -5804,6 +5838,14 @@ aside .lang-switcher a:hover {
 .page-pricing .price-type.isDetailed .price-toggleDetail {
   display: none;
 }
+
+/* --- coworkers page -- */
+.page-coworkers .coworker-filtering,
+.page-coworkers .coworker-sorting,
+.page-coworkers .coworker-search {
+  margin: 5px 10px;
+}
+
 .page-coworkers .coworker-search input {
   display: inline-block;
   height: 30px;

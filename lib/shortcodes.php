@@ -81,15 +81,15 @@ function coworkers_shortcode( $atts, $content = null ) {
   $result .= '  <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>';
   $result .= '</dialog>';
 
-  $result .= '<section id="page-coworkers" class="page-coworkers u-pv60">';
-  $result .= '  <div class="row u-aligncenter u-mb40">';
+  $result .= '<section id="page-coworkers" class="page-coworkers u-pv40">';
+  $result .= '  <div class="row u-aligncenter u-mb20">';
   $result .= '    <div class="col-xs-12 actions">';
-  $result .= '      <span class="btn-group u-mr20 coworker-filtering">';
+  $result .= '      <span class="btn-group coworker-filtering">';
   $result .= '        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="coworker">all</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-filter="current">current</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-filter="past">past</a>';
   $result .= '      </span>';
-  $result .= '      <span class="btn-group u-mr20 coworker-sorting">';
+  $result .= '      <span class="btn-group coworker-sorting">';
   $result .= '        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-sort="random">random</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-sort="name">by name</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-sort="title">by title</a>';
