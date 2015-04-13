@@ -6,7 +6,7 @@
 
 	<title><?php wp_title('|', true, 'right'); ?></title>
 
-	<meta name="description" content="" />
+	<meta name="description" content="Yazane is a fresh coworking space in Karaköy, Istanbul, bringing together freelancers and small companies in a stimulating working environment." />
 	<meta name="keywords" content="" />
 	<meta name="author" content="L Daniel Swakman, www.ldaniel.eu" />
 	<meta charset="utf-8" />
@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" />
 
 	<link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
+
+  <link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/assets/img/background-working.jpg" / ><!--formatted-->
 
   <!-- Google Analytics tracking code -->
   <script>
