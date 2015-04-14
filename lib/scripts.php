@@ -21,6 +21,7 @@ function roots_scripts() {
    */
   if (WP_ENV === 'development') {
     $assets = array(
+      'bootstrap' => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
       'css'       => '/assets/css/main.min.css',
       'js'        => '/assets/js/scripts.min.js',
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
@@ -32,6 +33,7 @@ function roots_scripts() {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
     $assets     = json_decode($get_assets, true);
     $assets     = array(
+      'bootstrap' => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
@@ -41,6 +43,7 @@ function roots_scripts() {
     );
   }
 
+  wp_enqueue_style('bootstrap_css', $assets['bootstrap'], false, null);
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   /**
