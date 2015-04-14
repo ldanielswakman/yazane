@@ -4903,6 +4903,7 @@ label {
 }
 input, textarea {
   padding: 5px 10px;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid #ccd;
   font-size: 1.1em;
@@ -5341,6 +5342,9 @@ dialog {
   z-index: 6;
   display: block;
   min-width: 300px;
+  max-width: 900px;
+  max-height: 90vh;
+  padding: 5vh 10px;
   border: none;
   text-align: center;
   font-family: PT Sans;
@@ -5362,8 +5366,40 @@ dialog.isVisible {
   -o-transform: scale(1);
   transform: scale(1);
 }
+dialog #closeDialog {
+  z-index: 2;
+}
 dialog #closeDialog:hover {
   color: #7dadbc;
+}
+dialog .dialog-content {
+  max-height: 80vh;
+  padding: 5px;
+  overflow-y: scroll;
+
+  /* -- Lea Verou's scrolling box shadows */
+  background:
+    /* Shadow covers */
+    linear-gradient(white 30%, rgba(255,255,255,0)),
+    linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+    
+    /* Shadows */
+    radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
+    radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+  background:
+    /* Shadow covers */
+    linear-gradient(white 30%, rgba(255,255,255,0)),
+    linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+    
+    /* Shadows */
+    radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  
+  background-attachment: local, local, scroll, scroll;
+
 }
 dialog label {
   width: 15vw;
@@ -5405,11 +5441,12 @@ dialog#coworker_detail .coworker-image img {
 }
 @media (max-width:768px) {
   dialog#coworker_detail .coworker-description {
-    max-height: 55vh;
+    max-height: 48vh;
     overflow: scroll;
   }
 }
 .parallax {
+  position: static;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
@@ -6029,4 +6066,66 @@ figure.alignnone {
   .sidebar {
   float: left;
   width: 33.33333333%}
+}
+
+
+
+
+
+@media (max-width:768px) {
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  #intro {
+    max-height: 40vh;
+  }
+  #tagline blockquote {
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+  #nav-menu-toggle {
+    top: 10px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  dialog label, dialog input, dialog textarea {
+    text-align: left;
+    width: 100%;
+  }
+}
+@media (max-width:400px) {
+  nav {
+    width: 250px;
+    background-color: #fff;
+    -webkit-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    -o-transform: translateX(-250px);
+    transform: translateX(-250px);
+  }
+}
+@media (max-height:550px) {
+  nav .logo {
+    padding: 30px 20px;
+  }
+  nav .menu li {
+    height: 45px;
+  }
+  nav .menu li[class*="ion-"]:before {
+    padding: 7px 15px;
+  }
+  nav .menu a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media (max-height:360px) {
+  nav .logo {
+    display: none;
+  }
+  nav ul {
+    margin-top: 20px;
+  }
 }
