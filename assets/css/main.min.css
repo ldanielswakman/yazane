@@ -624,7 +624,6 @@ dialog#coworker_detail .coworker-image img {
   }
 }
 .parallax {
-  position: static;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
@@ -978,7 +977,7 @@ aside .lang-switcher a:hover {
   background-color: #eee;
 }
 #page-hero h3 {
-  color: #7dadbc;
+  color: rgba(0, 0, 0, 0.5);
 }
 #page-hero blockquote {
   font-size: 2.5em;

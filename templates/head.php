@@ -22,10 +22,7 @@
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kreon:300,400,700" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" />
-
 	<link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
-
   <link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/assets/img/background-working.jpg" / ><!--formatted-->
 
   <!-- Google Analytics tracking code -->
