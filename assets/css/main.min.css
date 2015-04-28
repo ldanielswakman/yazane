@@ -1208,6 +1208,56 @@ blockquote sup {
 .page-calendar table.gce-calendar td.gce-today.gce-today-has-events:hover, .page-calendar table.gce-calendar td.gce-today.gce-has-events:hover {
   background-color: #588c99;
 }
+.qtip {
+  padding: 10px 15px;
+  font-size: 1em;
+  max-width: 320px;
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.qtip .qtip-tip {
+  display: none !important;
+}
+.qtip .gce-tooltip-title {
+  white-space: nowrap;
+  font-size: 1em;
+  color: #7dadbc;
+  font-weight: normal;
+}
+.qtip .gce-event-calendar {
+  position: relative;
+  top: -0.15em;
+  display: inline-block;
+  float: right;
+  margin-left: 20px;
+  color: #ccd;
+  cursor: pointer;
+}
+.qtip .gce-event-calendar:hover,
+.qtip .gce-event-calendar:focus {
+  color: #334;
+}
+.qtip .gce-event-calendar:active {
+  color: #7dadbc;
+}
+.qtip .gce-event-info ul li {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.qtip .gce-event-info ul li:not(:first-child) {
+  border-top: 1px solid #dde;
+}
+.qtip .gce-event-time {
+  white-space: nowrap;
+  color: #889;
+}
+.qtip a {
+  cursor: pointer;
+}
 .gallery-row {
   padding: 10px 0;
 }
