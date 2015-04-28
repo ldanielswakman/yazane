@@ -862,19 +862,19 @@ aside .lang-switcher a:hover {
 #tagline {
   min-height: 40vh;
 }
-#tagline blockquote {
+blockquote {
   font-size: 1.6em;
   font-weight: light;
   letter-spacing: 0.05em;
 }
-#tagline blockquote a {
+blockquote a {
   color: #7dadbc;
 }
-#tagline blockquote a:hover {
+blockquote a:hover {
   color: #7dadbc;
   border-bottom: 1px dashed #7dadbc;
 }
-#tagline sup {
+blockquote sup {
   font-size: 0.6em;
   color: #7dadbc;
 }
@@ -1264,7 +1264,7 @@ figure.alignnone {
   #intro {
     max-height: 40vh;
   }
-  #tagline blockquote {
+  blockquote {
     font-size: 1.4em;
     line-height: 1.5em;
   }
