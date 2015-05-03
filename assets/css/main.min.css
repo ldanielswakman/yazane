@@ -367,6 +367,9 @@ input:focus, textarea:focus {
 .u-block {
   display: block;
 }
+.u-bordertop {
+  border-top: 1px solid #dde;
+}
 .c-light {
   color: #ccd;
 }
@@ -1006,16 +1009,18 @@ blockquote sup {
   padding: 20px 10px;
   background-color: #588c99;
   border-radius: 50%;
-  font-size: 1.6em;
+  font-size: 1.4em;
   line-height: 0.75em;
   font-weight: bold;
   letter-spacing: normal;
+  text-align: center;
   color: #fff;
   z-index: 2;
+  vertical-align: top;
 }
 .page-pricing .prices .badge small {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.5em;
+  font-size: 0.6em;
   font-weight: normal;
 }
 .page-pricing .prices .badge-secondary {
@@ -1030,6 +1035,9 @@ blockquote sup {
 }
 .page-pricing .price-type.isDetailed .badge-secondary {
   display: inline-block;
+}
+.page-pricing .prices .badge-empty {
+  background-color: transparent;
 }
 .page-pricing .price-type .btn-block {
   display: block;
