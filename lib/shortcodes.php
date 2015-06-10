@@ -35,7 +35,7 @@ function coworkers_preview_shortcode( $atts, $content = null ) {
     $result .= '  </div>';
   }
   $result .= '    <div class="col-xs-12 actions u-mt40 u-aligncenter">';
-  $result .= '      <a href="' . home_url('/members') . '" class="btn u-ma5">see all members</a>';
+  $result .= '      <a href="/members/" class="btn u-ma5">see all members</a>';
   $result .= '    </div>';
   $result .= '  </div>';
   $result .= '</section>';
@@ -45,7 +45,7 @@ function coworkers_preview_shortcode( $atts, $content = null ) {
 add_shortcode('coworkers_preview', 'coworkers_preview_shortcode');
 
 /**
- * Show a selection of coworkers
+ * Show all coworkers
  */
 function coworkers_shortcode( $atts, $content = null ) {
   $a = shortcode_atts( array(
@@ -81,15 +81,15 @@ function coworkers_shortcode( $atts, $content = null ) {
   $result .= '  <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>';
   $result .= '</dialog>';
 
-  $result .= '<section id="page-coworkers" class="page-coworkers u-pv40">';
-  $result .= '  <div class="row u-aligncenter u-mb20">';
+  $result .= '<section id="page-coworkers" class="page-coworkers u-pv60">';
+  $result .= '  <div class="row u-aligncenter u-mb40">';
   $result .= '    <div class="col-xs-12 actions">';
-  $result .= '      <span class="btn-group coworker-filtering">';
+  $result .= '      <span class="btn-group u-mr20 coworker-filtering">';
   $result .= '        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="coworker">all</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-filter="current">current</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-filter="past">past</a>';
   $result .= '      </span>';
-  $result .= '      <span class="btn-group coworker-sorting">';
+  $result .= '      <span class="btn-group u-mr20 coworker-sorting">';
   $result .= '        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-sort="random">random</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-sort="name">by name</a>';
   $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-sort="title">by title</a>';
@@ -140,3 +140,124 @@ function coworkers_shortcode( $atts, $content = null ) {
   return $result;
 }
 add_shortcode('coworkers', 'coworkers_shortcode');
+
+
+/**
+ * Show a selection of companies
+ */
+function companies_preview_shortcode( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+    'max' => 6,
+    'status' => 'active',
+  ), $atts );
+
+  $posts = get_posts( array(
+    'post_type' => 'companies',
+    'orderby' => 'rand',
+    'posts_per_page' => $a['max']
+  ));
+
+  $result = '';
+  $result .= '<section id="companies" class="u-pv80">';
+  $result .= '  <div class="row">';
+  $result .= '    <div class="col-xs-12 u-mb40 u-aligncenter">';
+  $result .= '      <h2>companies</h2>';
+  $result .= '      <p>a random selection of companies at Yazane:</p>';
+  $result .= '    </div>';
+  $result .= '  </div>';
+  $result .= '  <div class="row u-alignleft">';
+  foreach($posts as $post) {
+    $name = get_the_title( $post->ID );
+    $image = get_the_post_thumbnail( $post->ID, array(80, 80) );
+
+    $result .= '  <div class="company col-sm-4 col-xs-6 u-mv20">';
+    $result .= '    <div class="company-image">' . $image . '</div>';
+    $result .= '    <h4 class="u-mt20">' . $name . '</h4>';
+    $result .= '  </div>';
+  }
+  $result .= '    <div class="col-xs-12 actions u-mt40 u-aligncenter">';
+  $result .= '      <a href="/members/" class="btn u-ma5">see all members</a>';
+  $result .= '    </div>';
+  $result .= '  </div>';
+  $result .= '</section>';
+
+  return $result;
+}
+add_shortcode('companies_preview', 'companies_preview_shortcode');
+
+/**
+ * Show all companies
+ */
+function companies_shortcode( $atts, $content = null ) {
+  $posts = get_posts( array(
+    'post_type' => 'companies',
+    'order' => 'ASC',
+    'posts_per_page' => -1
+  ));
+
+  $result = '';
+  $result .= '<dialog id="company_detail" class="u-pv40">';
+  $result .= '  <div class="row u-mb20">';
+  $result .= '    <div class="col-sm-3 col-xs-6 col-xs-offset-3 col-sm-offset-0">';
+  $result .= '      <div class="company-image"><img src="" alt="" /></div>';
+  $result .= '    </div>';
+  $result .= '    <div class="col-sm-4 col-xs-12 u-mb20 u-alignleft">';
+  $result .= '      <h4 class="company-name">name</h4>';
+  $result .= '      <p class="company-title small">title</p>';
+  $result .= '    </div>';
+  $result .= '    <div class="company-links col-sm-4 col-xs-12 u-alignright">';
+  $result .= '    </div>';
+  $result .= '  </div>';
+  $result .= '  <div class="row">';
+  $result .= '    <div class="col-sm-8 col-sm-offset-3 u-alignleft">';
+  $result .= '      <p class="company-description small">description</p>';
+  $result .= '    </div>';
+  $result .= '  </div>';
+  $result .= '  <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>';
+  $result .= '</dialog>';
+
+  $result .= '<section id="page-companies" class="page-companies u-pv60">';
+  $result .= '  <div class="row u-aligncenter u-mb40">';
+  $result .= '    <div class="col-xs-12 actions">';
+  $result .= '      <span class="btn-group u-mr20 company-filtering">';
+  $result .= '        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="company">all</a>';
+  $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-filter="current">current</a>';
+  $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-filter="past">past</a>';
+  $result .= '      </span>';
+  $result .= '      <span class="btn-group u-mr20 company-sorting">';
+  $result .= '        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-sort="random">random</a>';
+  $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-sort="name">by name</a>';
+  $result .= '        <a href="javascript:void(0)" class="btn btn-sm" data-sort="title">by title</a>';
+  $result .= '      </span>';
+  $result .= '      <span class="btn-group company-search">';
+  $result .= '        <input type="search" id="companysearch" placeholder="SEARCH..." class="btn btn-sm" />';
+  $result .= '      </span>';
+  $result .= '    </div>';
+  $result .= '  </div>';
+  $result .= '  <div class="row u-aligncenter company-container">';
+
+  foreach($posts as $post) {
+    $name = get_the_title( $post->ID );
+    $image = get_the_post_thumbnail( $post->ID, array(150, 150) );
+    $active = get_post_meta( $post->ID, 'company_active', true );
+    $current = ($active == 'yes') ? 'current' : 'past';
+    $description = get_post_meta( $post->ID, 'company_description', true );
+    $website = get_post_meta( $post->ID, 'company_website', true );
+
+    $result .= '    <div class="company col-sm-3 col-xs-6 u-mv20 ' . $current . '">';
+    $result .= '      <div class="company-image">' . $image . '</div>';
+    $result .= '      <h4 class="company-name u-mt20">' . $name . '</h4>';
+    $result .= '      <p class="company-description small">' . $description . '</p>';
+    $result .= '      <div class="company-links">';
+    if ($website != '')
+      $result .= '      <a href="' . $website . '" target="_blank" class="btn btn-circle btn-sm u-aligncenter"><i class="ion ion-link ion-15x"></i></a>';
+    $result .= '      </div>';
+    $result .= '    </div>';
+  }
+  $result .= '    </div>';
+  $result .= '  </div>';
+  $result .= '</section>';
+
+  return $result;
+}
+add_shortcode('companies', 'companies_shortcode');
