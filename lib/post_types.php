@@ -192,7 +192,8 @@ add_action('save_post', 'save_custom_post_meta', 1, 2);
 function save_meta($post, $meta_key) {
   // Verify this came from the our screen and with proper authorization,
   // because save_post can be triggered at other times
-  if ( !wp_verify_nonce($_POST[$meta_key . '_box_nonce'], $meta_key . '_box') )
+  if ( !array_key_exists($meta_key . '_box_nonce', $_POST) ||
+       !wp_verify_nonce($_POST[$meta_key . '_box_nonce'], $meta_key . '_box') )
     return;
 
   // Save the meta value to the database
