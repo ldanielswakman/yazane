@@ -613,7 +613,8 @@ dialog input, dialog textarea {
   opacity: 1;
   pointer-events: all;
 }
-dialog#coworker_detail {
+dialog#coworker_detail,
+dialog#company_detail {
   width: 80vw;
 }
 dialog#coworker_detail .coworker-image {
@@ -623,8 +624,12 @@ dialog#coworker_detail .coworker-image {
 dialog#coworker_detail .coworker-image img {
   max-width: 150px;
 }
+dialog#company_detail .company-image img {
+  height: auto;
+}
 @media (max-width:768px) {
-  dialog#coworker_detail .coworker-description {
+  dialog#coworker_detail .coworker-description,
+  dialog#company_detail .company-description {
     max-height: 48vh;
     overflow: scroll;
   }
@@ -1075,11 +1080,14 @@ blockquote sup {
 /* --- coworkers page -- */
 .page-coworkers .coworker-filtering,
 .page-coworkers .coworker-sorting,
-.page-coworkers .coworker-search {
+.page-coworkers .coworker-search,
+.page-companies .company-filtering,
+.page-companies .company-sorting,
+.page-companies .company-search {
   margin: 5px 10px;
 }
-
-.page-coworkers .coworker-search input {
+.page-coworkers .coworker-search input,
+.page-companies .company-search input {
   display: inline-block;
   height: 30px;
   width: 100px;
@@ -1088,13 +1096,16 @@ blockquote sup {
   -o-transition: width .3s cubic-bezier(1,  0,  0,  1);
   transition: width .3s cubic-bezier(1,  0,  0,  1);
 }
-.page-coworkers .coworker-search input:focus {
+.page-coworkers .coworker-search input:focus,
+.page-companies .company-search input:focus {
   width: 250px;
 }
-.page-coworkers .coworker-search {
+.page-coworkers .coworker-search,
+.page-companies .company-search {
   position: relative;
 }
-.page-coworkers .coworker-search:after {
+.page-coworkers .coworker-search:after,
+.page-companies .company-search:after {
   content: "\f2f5";
   position: absolute;
   top: 0.1em;
@@ -1109,12 +1120,24 @@ blockquote sup {
   width: 120px;
   height: 120px;
 }
+.page-companies .company-container .company-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.page-companies .company-container .company-image img {
+  height: auto;
+}
+.page-companies .company-container .company:hover,
 .page-coworkers .coworker-container .coworker:hover {
   cursor: pointer;
 }
+.page-companies .company-container .company:hover h4,
 .page-coworkers .coworker-container .coworker:hover h4 {
   color: #7dadbc;
 }
+.page-companies .company-container .company:hover .company-image:before,
 .page-coworkers .coworker-container .coworker:hover .coworker-image:before {
   content: "\f217";
   position: absolute;
@@ -1127,9 +1150,15 @@ blockquote sup {
   text-align: center;
   color: #7dadbc;
 }
+.page-companies .company-container .company-description, .page-companies .company-container .company-links,
 .page-coworkers .coworker-container .coworker-description, .page-coworkers .coworker-container .coworker-links {
   display: none;
 }
+.page-companies {
+  border-top: 1px solid #ccd;
+}
+
+/* -- calendar page --- */
 .page-calendar caption {
   text-align: center;
 }

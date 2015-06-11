@@ -198,25 +198,26 @@ function companies_shortcode( $atts, $content = null ) {
   $result = '';
   $result .= '<dialog id="company_detail" class="u-pv40">';
   $result .= '  <div class="row u-mb20">';
-  $result .= '    <div class="col-sm-3 col-xs-6 col-xs-offset-3 col-sm-offset-0">';
+  $result .= '    <div class="col-sm-4 col-xs-8 col-xs-offset-2 col-sm-offset-0">';
   $result .= '      <div class="company-image"><img src="" alt="" /></div>';
   $result .= '    </div>';
-  $result .= '    <div class="col-sm-4 col-xs-12 u-mb20 u-alignleft">';
+  $result .= '    <div class="col-sm-8 col-xs-12 u-mb20 u-alignleft">';
+  $result .= '      <div class="company-links u-floatright">';
+  $result .= '      </div>';
   $result .= '      <h4 class="company-name">name</h4>';
   $result .= '      <p class="company-title small">title</p>';
-  $result .= '    </div>';
-  $result .= '    <div class="company-links col-sm-4 col-xs-12 u-alignright">';
-  $result .= '    </div>';
-  $result .= '  </div>';
-  $result .= '  <div class="row">';
-  $result .= '    <div class="col-sm-8 col-sm-offset-3 u-alignleft">';
-  $result .= '      <p class="company-description small">description</p>';
+  $result .= '      <p class="company-description small u-mt20">description</p>';
   $result .= '    </div>';
   $result .= '  </div>';
   $result .= '  <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>';
   $result .= '</dialog>';
 
   $result .= '<section id="page-companies" class="page-companies u-pv60">';
+  $result .= '  <div class="row u-mb40">';
+  $result .= '    <div class="col-xs-12 u-aligncenter">';
+  $result .= '      <h4>COMPANIES</h4>';
+  $result .= '    </div>';
+  $result .= '  </div>';
   $result .= '  <div class="row u-aligncenter u-mb40">';
   $result .= '    <div class="col-xs-12 actions">';
   $result .= '      <span class="btn-group u-mr20 company-filtering">';
@@ -238,13 +239,13 @@ function companies_shortcode( $atts, $content = null ) {
 
   foreach($posts as $post) {
     $name = get_the_title( $post->ID );
-    $image = get_the_post_thumbnail( $post->ID, array(150, 150) );
+    $image = get_the_post_thumbnail( $post->ID, 'medium' );
     $active = get_post_meta( $post->ID, 'company_active', true );
     $current = ($active == 'yes') ? 'current' : 'past';
     $description = get_post_meta( $post->ID, 'company_description', true );
     $website = get_post_meta( $post->ID, 'company_website', true );
 
-    $result .= '    <div class="company col-sm-3 col-xs-6 u-mv20 ' . $current . '">';
+    $result .= '    <div class="company col-sm-3 u-mv20 ' . $current . '">';
     $result .= '      <div class="company-image">' . $image . '</div>';
     $result .= '      <h4 class="company-name u-mt20">' . $name . '</h4>';
     $result .= '      <p class="company-description small">' . $description . '</p>';
