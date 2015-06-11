@@ -21,14 +21,14 @@ function roots_scripts() {
    */
   if (WP_ENV === 'development') {
     $assets = array(
-      'bootstrap' => '/assets/css/vendor/bootstrap.min.css',
-      'ionicons' => '/assets/css/vendor/ionicons.min.css',
-      'css'       => '/assets/css/main.min.css',
-      'js'        => '/assets/js/scripts.min.js',
-      'modernizr' => '/assets/js/vendor/modernizr.min.js',
-      'jquery'    => '/assets/js/vendor/jquery.min.js',
-      'isotope'   => '/assets/js/vendor/isotope.pkgd.min.js',
-      'smoothscoll' => '/assets/js/vendor/jquery.smooth-scroll.min.js'
+      'bootstrap' => get_template_directory_uri() . '/assets/css/bootstrap.min.css',
+      'ionicons' => get_template_directory_uri() . '/assets/css/ionicons.min.css',
+      'css'       => get_template_directory_uri() . '/assets/css/main.min.css',
+      'js'        => get_template_directory_uri() . '/assets/js/scripts.min.js',
+      'modernizr' => get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js',
+      'jquery'    => get_template_directory_uri() . '/assets/js/vendor/jquery.min.js',
+      'isotope'   => get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js',
+      'smoothscoll' => get_template_directory_uri() . '/assets/js/vendor/jquery.smooth-scroll.min.js'
     );
   } else {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
@@ -37,7 +37,7 @@ function roots_scripts() {
       'bootstrap' => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
       'ionicons' => '//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css',
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
-      'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
+      'js'        => get_template_directory_uri() . '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
       'isotope'   => '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js',
@@ -47,7 +47,7 @@ function roots_scripts() {
 
   wp_enqueue_style('bootstrap_css', $assets['bootstrap'], false, null);
   wp_enqueue_style('ionicons_css', $assets['ionicons'], false, null);
-  wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+  wp_enqueue_style('roots_css', $assets['css'], false, null);
 
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
@@ -69,7 +69,7 @@ function roots_scripts() {
   wp_enqueue_script('smoothscoll', $assets['smoothscoll'], array(), null, true);
   wp_enqueue_script('google_maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBDKtoVoKNJradZzi2u2-e4qWYJRZFpGjg', array(), null);
   wp_enqueue_script('isotope', $assets['isotope'], array(), null, true);
-  wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
+  wp_enqueue_script('roots_js', $assets['js'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 
