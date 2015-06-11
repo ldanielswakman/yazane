@@ -20,6 +20,8 @@ function create_post_types() {
       'labels' => array(
         'name' => __( 'Coworkers' ),
         'singular_name' => __( 'Coworker' ),
+        'menu_name' => __( 'Members' ),
+        'all_items' => __( 'Coworkers' ),
         'new_item' => __( 'New Coworker' ),
         'add_new_item' => __( 'Add New Coworker' ),
         'edit_item' => __( 'Edit Coworker' ),
@@ -45,6 +47,7 @@ function create_post_types() {
         'not_found' => __( 'No Companies Found' ),
         'create' => __( 'Create Company' ),
       ),
+      'show_in_menu' => 'edit.php?post_type=coworkers',
       'menu_icon' => 'dashicons-groups',
       'public' => true,
       'supports' => array('title', 'thumbnail', 'revisions'),
@@ -93,9 +96,29 @@ function add_companies_metaboxes( $post ) {
                 'meta_field_box', 'companies', 'normal', 'default',
                 array( 'company_active', 'Active', 'yesno', 'yes' )
   );
+  add_meta_box( 'company_field', 'Field',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_field', 'Field', 'text', '' )
+  );
   add_meta_box( 'company_description', 'Description',
                 'meta_field_box', 'companies', 'normal', 'default',
-                array( 'company_description', 'Description', 'text', '' )
+                array( 'company_description', 'Description', 'textarea', '' )
+  );
+  add_meta_box( 'company_linkedin', 'LinkedIn URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_linkedin', 'LinkedIn URL', 'text', '' )
+  );
+  add_meta_box( 'company_twitter', 'Twitter URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_twitter', 'Twitter URL', 'text', '' )
+  );
+  add_meta_box( 'company_facebook', 'Facebook URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_facebook', 'Facebook URL', 'text', '' )
+  );
+  add_meta_box( 'company_instagram', 'Instagram URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_instagram', 'Instagram URL', 'text', '' )
   );
   add_meta_box( 'company_website', 'Website URL',
                 'meta_field_box', 'companies', 'normal', 'default',
@@ -177,7 +200,12 @@ function save_custom_post_meta($post_id, $post) {
                                      'coworker_instagram',
                                      'coworker_website'),
                 'companies' => array('company_active',
+                                     'company_field',
                                      'company_description',
+                                     'company_linkedin',
+                                     'company_twitter',
+                                     'company_facebook',
+                                     'company_instagram',
                                      'company_website'));
 
   if ( !array_key_exists( $post->post_type, $keys ) )
