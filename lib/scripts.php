@@ -36,7 +36,7 @@ function roots_scripts() {
     $assets     = array(
       'bootstrap' => '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
       'ionicons' => '//code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css',
-      'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
+      'css'       => get_template_directory_uri() . '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => get_template_directory_uri() . '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
