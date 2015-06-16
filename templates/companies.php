@@ -10,13 +10,12 @@ $posts = get_posts( array(
   <div class="row u-mb20">
     <div class="col-sm-4 col-xs-8 col-xs-offset-2 col-sm-offset-0">
       <div class="company-image"><img src="" alt="" /></div>
+      <div class="company-links u-mt30"></div>
     </div>
     <div class="col-sm-8 col-xs-12 u-mb20 u-alignleft">
-      <div class="company-links u-floatright">
-      </div>
       <h4 class="company-name">name</h4>
-      <p class="company-title small">title</p>
-      <p class="company-description small u-mt20">description</p>
+      <p class="company-field small">title</p>
+      <p class="company-description small u-scrollable u-mt20">description</p>
     </div>
   </div>
   <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>
@@ -50,21 +49,46 @@ $posts = get_posts( array(
     <?php 
     foreach($posts as $post):
       $name = get_the_title( $post->ID );
+      $slug = sanitize_title(get_the_title());
       $image = get_the_post_thumbnail( $post->ID, 'medium' );
       $active = get_post_meta( $post->ID, 'company_active', true );
       $current = ($active == 'yes') ? ' current' : ' past';
+      $field = get_post_meta( $post->ID, 'company_field', true );
       $description = get_post_meta( $post->ID, 'company_description', true );
       $linkedin = get_post_meta( $post->ID, 'company_linkedin', true );
       $twitter = get_post_meta( $post->ID, 'company_twitter', true );
       $facebook = get_post_meta( $post->ID, 'company_facebook', true );
       $instagram = get_post_meta( $post->ID, 'company_instagram', true );
       $website = get_post_meta( $post->ID, 'company_website', true );
+
+      // Find connected coworkers
+      $connected = new WP_Query( array(
+        'connected_type' => 'coworkers_to_companies',
+        'connected_items' => $post,
+        'nopaging' => true,
+      ) );
       ?>
 
-      <div class="company col-sm-3 u-mv20<?php echo $current ?>">
+      <div id="<?php echo $slug ?>" class="company col-sm-3 u-mv20<?php echo $current ?>">
         <div class="company-image"><?php echo $image ?></div>
         <h4 class="company-name u-mt20 u-hidden"><?php echo $name ?></h4>
-        <p class="company-description small u-hidden"><?php echo $description ?></p>
+        <p class="company-field small u-hidden"><?php echo $field ?></p>
+        <div class="company-description small u-hidden">
+          <p><?php echo $description ?></p>
+          <?php
+          if ( $connected->have_posts() ) :
+          echo '<hr class="u-mb10" />';
+          while ( $connected->have_posts() ) : $connected->the_post(); ?>
+            <a href="#<?php echo sanitize_title(get_the_title()) ?>" class="badge">
+            <?php 
+            echo '<span class="text">' . get_the_title() . '</span>'; echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?>
+            </a>
+          <?php
+          endwhile;
+          endif;
+          wp_reset_postdata();
+          ?>
+        </div>
 
         <div class="company-links u-hidden">
           <?php if ($facebook != ''): ?>

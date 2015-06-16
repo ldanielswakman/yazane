@@ -559,7 +559,7 @@ dialog #closeDialog {
 dialog #closeDialog:hover {
   color: #7dadbc;
 }
-dialog .dialog-content {
+.dialog-content, .u-scrollable {
   max-height: 80vh;
   padding: 5px;
   overflow-y: scroll;
@@ -604,6 +604,7 @@ dialog input, dialog textarea {
   z-index: 5;
   display: block;
   width: 100vw;
+  height: 100%; /* fallback for non-vh-browsers */
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -630,12 +631,10 @@ dialog#coworker_detail .coworker-image img {
 dialog#company_detail .company-image img {
   height: auto;
 }
-@media (max-width:768px) {
-  dialog#coworker_detail .coworker-description,
-  dialog#company_detail .company-description {
-    max-height: 48vh;
-    overflow: scroll;
-  }
+dialog#coworker_detail .coworker-description,
+dialog#company_detail .company-description {
+  max-height: 400px; /* fallback for non-vh browsers */
+  max-height: 48vh;
 }
 .parallax {
   -webkit-background-size: cover;
@@ -738,6 +737,7 @@ nav #mask {
   z-index: 4;
   display: block;
   width: 100vw;
+  height: 100%; /* fallback for non-vh browsers */
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -1080,7 +1080,7 @@ blockquote sup {
   display: none;
 }
 
-/* --- coworkers page -- */
+/* --- members page -- */
 .page-coworkers .coworker-filtering,
 .page-coworkers .coworker-sorting,
 .page-coworkers .coworker-search,
@@ -1155,6 +1155,51 @@ blockquote sup {
 }
 .page-companies {
   border-top: 1px solid #ccd;
+}
+.members .badge {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  padding: 0;
+  background: none;
+}
+.members #coworker_detail .badge {
+  width: 120px;
+}
+.members .badge img {
+  width: 100%;
+  height: auto;
+}
+.members #company_detail .badge img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.members .badge .text {
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  display: none;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.members .badge .text:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 15px;
+  border: 6px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+.members .badge:hover .text {
+  display: inline-block;
 }
 
 /* -- calendar page --- */

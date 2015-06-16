@@ -28,7 +28,7 @@ $posts = get_posts( array(
   </div>
   <div class="row">
     <div class="col-sm-8 col-sm-offset-3 u-alignleft">
-      <p class="coworker-description small">description</p>
+      <p class="coworker-description small u-scrollable">description</p>
     </div>
   </div>
   <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>
@@ -57,6 +57,7 @@ $posts = get_posts( array(
     <?php
     foreach($posts as $post):
       $name = get_the_title( $post->ID );
+      $slug = sanitize_title(get_the_title());
       $image = get_the_post_thumbnail( $post->ID, array(150, 150) );
       $active = get_post_meta( $post->ID, 'coworker_active', true );
       $current = ($active == 'yes') ? ' current' : ' past';
@@ -67,13 +68,35 @@ $posts = get_posts( array(
       $facebook = get_post_meta( $post->ID, 'coworker_facebook', true );
       $instagram = get_post_meta( $post->ID, 'coworker_instagram', true );
       $website = get_post_meta( $post->ID, 'coworker_website', true );
+
+      // Find connected coworkers
+      $connected = new WP_Query( array(
+        'connected_type' => 'coworkers_to_companies',
+        'connected_items' => $post,
+        'nopaging' => true,
+      ) );
       ?>
 
-      <div class="coworker col-sm-3 col-xs-6 u-mv20<?php echo $current ?>">
+      <div id="<?php echo $slug ?>" class="coworker col-sm-3 col-xs-6 u-mv20<?php echo $current ?>">
         <div class="coworker-image"><?php echo $image ?></div>
         <h4 class="coworker-name u-mt20"><?php echo $name ?></h4>
         <p class="coworker-title small"><?php echo $job_title ?></p>
-        <p class="coworker-description small u-hidden"><?php echo $bio ?></p>
+        <div class="coworker-description small u-hidden">
+          <p><?php echo $bio ?></p>
+          <?php
+          if ( $connected->have_posts() ) :
+          echo '<hr class="u-mb10" />';
+          while ( $connected->have_posts() ) : $connected->the_post(); ?>
+            <a href="#<?php echo sanitize_title(get_the_title()) ?>" class="badge">
+            <?php 
+            echo '<span class="text">' . get_the_title() . '</span>'; echo get_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
+            </a>
+          <?php
+          endwhile;
+          endif;
+          wp_reset_postdata();
+          ?>
+        </div>
 
         <div class="coworker-links u-hidden">
           <?php if ($facebook != ''): ?>
@@ -92,7 +115,7 @@ $posts = get_posts( array(
             <a href="<?php echo $website ?>" target="_blank" class="btn btn-circle btn-sm u-aligncenter"><i class="ion ion-link ion-15x"></i></a>
           <?php endif; ?>
         </div>
-        
+
       </div>
     <?php endforeach; ?>
 
