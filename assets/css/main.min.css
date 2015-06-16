@@ -530,9 +530,12 @@ dialog {
   display: block;
   min-width: 300px;
   max-width: 900px;
+  min-height: auto;
   max-height: 90vh;
+  margin: auto;
   padding: 5vh 10px;
   border: none;
+  background-color: #fff;
   text-align: center;
   font-family: PT Sans;
   opacity: 0;
