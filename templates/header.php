@@ -58,7 +58,7 @@
     <i class="ion-navicon ion-2x"></i>
     <i class="ion-close"></i>
   </a>
-  <div class="logo"><?php image_tag("logo.png"); ?></div>
+  <a href="<?php echo site_url() ?>"><div class="logo"><?php image_tag("logo.png"); ?></div></a>
 
   <?php wp_nav_menu() ?>
 

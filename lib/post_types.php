@@ -20,13 +20,38 @@ function create_post_types() {
       'labels' => array(
         'name' => __( 'Coworkers' ),
         'singular_name' => __( 'Coworker' ),
+        'menu_name' => __( 'Members' ),
+        'all_items' => __( 'Coworkers' ),
+        'new_item' => __( 'New Coworker' ),
         'add_new_item' => __( 'Add New Coworker' ),
         'edit_item' => __( 'Edit Coworker' ),
+        'search_items' => __( 'Search Coworkers' ),
+        'not_found' => __( 'No Coworkers Found' ),
+        'create' => __( 'Create Coworker' ),
       ),
       'menu_icon' => 'dashicons-id-alt',
       'public' => true,
       'supports' => array('title', 'thumbnail', 'revisions'),
       'register_meta_box_cb' => 'add_coworkers_metaboxes',
+    )
+  );
+  register_post_type( 'companies',
+    array(
+      'labels' => array(
+        'name' => __( 'Companies' ),
+        'singular_name' => __( 'Company' ),
+        'new_item' => __( 'New Company' ),
+        'add_new_item' => __( 'Add New Company' ),
+        'edit_item' => __( 'Edit Company' ),
+        'search_items' => __( 'Search Companies' ),
+        'not_found' => __( 'No Companies Found' ),
+        'create' => __( 'Create Company' ),
+      ),
+      'show_in_menu' => 'edit.php?post_type=coworkers',
+      'menu_icon' => 'dashicons-groups',
+      'public' => true,
+      'supports' => array('title', 'thumbnail', 'revisions'),
+      'register_meta_box_cb' => 'add_companies_metaboxes',
     )
   );
 }
@@ -63,6 +88,41 @@ function add_coworkers_metaboxes( $post ) {
   add_meta_box( 'coworker_website', 'Website URL',
                 'meta_field_box', 'coworkers', 'normal', 'default',
                 array( 'coworker_website', 'Website URL', 'text', '' )
+  );
+}
+
+function add_companies_metaboxes( $post ) {
+  add_meta_box( 'company_active', 'Active Member?',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_active', 'Active', 'yesno', 'yes' )
+  );
+  add_meta_box( 'company_field', 'Field',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_field', 'Field', 'text', '' )
+  );
+  add_meta_box( 'company_description', 'Description',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_description', 'Description', 'textarea', '' )
+  );
+  add_meta_box( 'company_linkedin', 'LinkedIn URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_linkedin', 'LinkedIn URL', 'text', '' )
+  );
+  add_meta_box( 'company_twitter', 'Twitter URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_twitter', 'Twitter URL', 'text', '' )
+  );
+  add_meta_box( 'company_facebook', 'Facebook URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_facebook', 'Facebook URL', 'text', '' )
+  );
+  add_meta_box( 'company_instagram', 'Instagram URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_instagram', 'Instagram URL', 'text', '' )
+  );
+  add_meta_box( 'company_website', 'Website URL',
+                'meta_field_box', 'companies', 'normal', 'default',
+                array( 'company_website', 'Website URL', 'text', '' )
   );
 }
 
@@ -130,20 +190,28 @@ function save_custom_post_meta($post_id, $post) {
   if ( !current_user_can( 'edit_post', $post->ID ))
     return;
 
-  // Return unless this is one of our custom post types
-  if ( 'coworkers' != $post->post_type )
+  // Loop through meta keys and save each field
+  $keys = array('coworkers' => array('coworker_active',
+                                     'coworker_job_title',
+                                     'coworker_bio',
+                                     'coworker_linkedin',
+                                     'coworker_twitter',
+                                     'coworker_facebook',
+                                     'coworker_instagram',
+                                     'coworker_website'),
+                'companies' => array('company_active',
+                                     'company_field',
+                                     'company_description',
+                                     'company_linkedin',
+                                     'company_twitter',
+                                     'company_facebook',
+                                     'company_instagram',
+                                     'company_website'));
+
+  if ( !array_key_exists( $post->post_type, $keys ) )
     return;
 
-  // Loop through meta keys and save each field
-  $keys = array('coworker_active',
-                'coworker_job_title',
-                'coworker_bio',
-                'coworker_linkedin',
-                'coworker_twitter',
-                'coworker_facebook',
-                'coworker_instagram',
-                'coworker_website');
-  foreach ($keys as $key) {
+  foreach ($keys[$post->post_type] as $key) {
     save_meta($post, $key);
   }
 }
@@ -152,7 +220,8 @@ add_action('save_post', 'save_custom_post_meta', 1, 2);
 function save_meta($post, $meta_key) {
   // Verify this came from the our screen and with proper authorization,
   // because save_post can be triggered at other times
-  if ( !wp_verify_nonce($_POST[$meta_key . '_box_nonce'], $meta_key . '_box') )
+  if ( !array_key_exists($meta_key . '_box_nonce', $_POST) ||
+       !wp_verify_nonce($_POST[$meta_key . '_box_nonce'], $meta_key . '_box') )
     return;
 
   // Save the meta value to the database
@@ -191,3 +260,20 @@ function disable_wysiwyg_for_CPT($default) {
     return false;
   return $default;
 }
+
+/**
+ * Register a many-to-many relationship between coworkers and companies
+ * using the Posts 2 Posts plugin
+ */
+function p2p_connection_types() {
+  p2p_register_connection_type( array(
+    'name' => 'coworkers_to_companies',
+    'from' => 'coworkers',
+    'to' => 'companies',
+    'admin_box' => array(
+      'show' => 'any',
+      'context' => 'advanced'
+    )
+  ) );
+}
+add_action( 'p2p_init', 'p2p_connection_types' );
