@@ -367,6 +367,9 @@ input:focus, textarea:focus {
 .u-block {
   display: block;
 }
+.u-hidden {
+  display: none;
+}
 .u-bordertop {
   border-top: 1px solid #dde;
 }
@@ -1149,10 +1152,6 @@ blockquote sup {
   font-size: 3em;
   text-align: center;
   color: #7dadbc;
-}
-.page-companies .company-container .company-description, .page-companies .company-container .company-links,
-.page-coworkers .coworker-container .coworker-description, .page-coworkers .coworker-container .coworker-links {
-  display: none;
 }
 .page-companies {
   border-top: 1px solid #ccd;

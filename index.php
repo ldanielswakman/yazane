@@ -11,14 +11,16 @@
 
 	<main>
 
-    <?php $posts = get_posts( array(
-        'post_type' => 'homepage_sections',
-        'order' => 'ASC',
-        'posts_per_page' => -1
-      ));
-      foreach($posts as $post) {
-        echo apply_filters('the_content', $post->post_content) . "\n\n";
-      }
+    <?php
+    // outputs homepage sections
+    $homepage_posts = new WP_Query( array(
+      'post_type' => 'homepage_sections',
+      'order' => 'ASC',
+      'posts_per_page' => -1
+    ));
+    while ( $homepage_posts->have_posts() ) : $homepage_posts->the_post();
+      the_content();
+    endwhile;  
     ?>
 
 	</main>
