@@ -6,10 +6,21 @@
 //   'status' => 'active',
 // ), $atts );
 
+$args = array(
+  'max' => 6,
+  'status' => 'active',
+);
 $posts = get_posts( array(
   'post_type' => 'companies',
   'orderby' => 'rand',
-  'posts_per_page' => $a['max']
+  'posts_per_page' => $args['max'],
+  'meta_query' => array(
+    array(
+     'key' => 'company_active',
+     'value' => 'yes',
+     'compare' => '='
+    )
+  )
 ));
 ?>
 
