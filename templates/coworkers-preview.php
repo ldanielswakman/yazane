@@ -12,7 +12,14 @@ $args = array(
 $posts = get_posts( array(
   'post_type' => 'coworkers',
   'orderby' => 'rand',
-  'posts_per_page' => $args['max']
+  'posts_per_page' => $args['max'],
+  'meta_query' => array(
+    array(
+     'key' => 'coworker_active',
+     'value' => 'yes',
+     'compare' => '='
+    )
+  )
 ));
 ?>
 
