@@ -2,7 +2,17 @@
   <div class="row u-pt60 u-pb80 u-aligncenter">
     <div class="col-sm-4">
       <?php image_tag('logo_negative.png',
-        array('width' => '250px', 'class' => 'u-mv20')); ?>
+        array('width' => '250px', 'class' => 'u-mv20')); 
+      ?>
+      <br />
+      <br />
+      <?php 
+      // shows terms and conditions link if such a page exists
+      $tnc_page = get_page_by_path( 'terms-and-conditions' );
+      if ($tnc_page->ID != 0):
+      ?>
+      <a href="<?php echo get_permalink( get_page_by_path( 'terms-and-conditions' ) ) ?>"><?php echo get_page_by_path( 'terms-and-conditions' )->post_title ?></a>
+      <?php endif; ?>
     </div>
     <div class="col-sm-4">
       <h4>Yazane coworking space</h4>
@@ -25,6 +35,7 @@
       <a href="https://twitter.com/yazanecowork" class="btn btn-circle btn-white u-mr10" target="_blank"><i class="ion-social-twitter ion-fw ion-2x"></i></a>
       <a href="https://facebook.com/YazaneIstanbul" class="btn btn-circle btn-white u-mr10" target="_blank"><i class="ion-social-facebook ion-fw ion-2x"></i></a>
       <a href="http://instagram.com/yazanecowork" class="btn btn-circle btn-white" target="_blank"><i class="ion-social-instagram ion-fw ion-2x"></i></a>
+
     </div>
   </div>
 </footer>
