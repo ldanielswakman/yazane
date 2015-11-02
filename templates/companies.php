@@ -27,7 +27,8 @@ $posts = get_posts( array(
       <h4>COMPANIES</h4>
     </div>
   </div>
-  <div class="row u-aligncenter u-mb40">
+
+  <!-- <div class="row u-aligncenter u-mb40">
     <div class="col-xs-12 actions">
       <span class="btn-group u-mr20 company-filtering">
         <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="company">all</a>
@@ -43,7 +44,8 @@ $posts = get_posts( array(
         <input type="search" id="companysearch" placeholder="SEARCH..." class="btn btn-sm" />
       </span>
     </div>
-  </div>
+  </div> -->
+  
   <div class="row u-aligncenter company-container">
 
     <?php 
