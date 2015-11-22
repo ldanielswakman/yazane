@@ -13,6 +13,7 @@ function create_post_types() {
       'menu_icon' => 'dashicons-editor-code',
       'public' => true,
       'supports' => array('title', 'editor', 'revisions', 'page-attributes'),
+      'register_meta_box_cb' => 'add_homepage_sections_metaboxes',
     )
   );
   register_post_type( 'coworkers',
@@ -56,6 +57,12 @@ function create_post_types() {
   );
 }
 
+function add_homepage_sections_metaboxes( $post ) {
+  add_meta_box( 'section_nav_visible', 'Visible in in-page navigation?',
+                'meta_field_box', 'homepage_sections', 'normal', 'default',
+                array( 'section_nav_visible', 'Active', 'yesno', 'yes' )
+  );
+}
 function add_coworkers_metaboxes( $post ) {
   add_meta_box( 'coworker_active', 'Active Member?',
                 'meta_field_box', 'coworkers', 'normal', 'default',
@@ -191,7 +198,8 @@ function save_custom_post_meta($post_id, $post) {
     return;
 
   // Loop through meta keys and save each field
-  $keys = array('coworkers' => array('coworker_active',
+  $keys = array('homepage_sections' => array('section_nav_visible'),
+                'coworkers' => array('coworker_active',
                                      'coworker_job_title',
                                      'coworker_bio',
                                      'coworker_linkedin',

@@ -24,7 +24,7 @@ $posts = get_posts( array(
 ));
 ?>
 
-<section id="coworkers" class="u-pv80">
+<section id="members" class="u-pv80">
 
   <div class="row">
     <div class="col-xs-12 u-mb40 u-aligncenter">
