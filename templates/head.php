@@ -6,7 +6,7 @@
 
 	<title><?php wp_title('|', true, 'right'); ?></title>
 
-	<meta name="description" content="Yazane is a fresh coworking space in Karaköy, Istanbul, bringing together freelancers and small companies in a stimulating working environment." />
+	<meta name="description" content="<?php pll_e('tagline') ?>" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="L Daniel Swakman, www.ldaniel.eu" />
 	<meta charset="utf-8" />

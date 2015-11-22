@@ -28,8 +28,8 @@ $posts = get_posts( array(
 
   <div class="row">
     <div class="col-xs-12 u-mb40 u-aligncenter">
-      <h2>companies</h2>
-      <p>a random selection of companies at Yazane:</p>
+      <h2><?php pll_e('companies_title'); ?></h2>
+      <p><?php pll_e('companies_preview_text'); ?>:</p>
     </div>
   </div>
   <div class="row u-aligncenter">
@@ -48,7 +48,7 @@ $posts = get_posts( array(
     <?php endforeach; ?>
 
     <div class="col-xs-12 actions u-mt40 u-aligncenter">
-      <a href="/members/" class="btn u-ma5">see all companies</a>
+      <a href="/members/" class="btn u-ma5"><?php pll_e('all_companies_button'); ?></a>
     </div>
 
   </div>

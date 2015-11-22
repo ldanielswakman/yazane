@@ -13,9 +13,9 @@ $posts = get_posts( array(
       <div class="company-links u-mt30"></div>
     </div>
     <div class="col-sm-8 col-xs-12 u-mb20 u-alignleft">
-      <h4 class="company-name">name</h4>
-      <p class="company-field small">title</p>
-      <p class="company-description small u-scrollable u-mt20">description</p>
+      <h4 class="company-name"><?php pll_e('name'); ?></h4>
+      <p class="company-field small"><?php pll_e('title'); ?></p>
+      <p class="company-description small u-scrollable u-mt20"><?php pll_e('description'); ?></p>
     </div>
   </div>
   <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>
@@ -24,27 +24,9 @@ $posts = get_posts( array(
 <section id="page-companies" class="page-companies u-pv60">
   <div class="row u-mb40">
     <div class="col-xs-12 u-aligncenter">
-      <h4>COMPANIES</h4>
+      <h4><?php echo strtoupper(pll__('companies_title')); ?></h4>
     </div>
   </div>
-
-  <!-- <div class="row u-aligncenter u-mb40">
-    <div class="col-xs-12 actions">
-      <span class="btn-group u-mr20 company-filtering">
-        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="company">all</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-filter="current">current</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-filter="past">past</a>
-      </span>
-      <span class="btn-group u-mr20 company-sorting">
-        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-sort="random">random</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-sort="name">by name</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-sort="title">by title</a>
-      </span>
-      <span class="btn-group company-search">
-        <input type="search" id="companysearch" placeholder="SEARCH..." class="btn btn-sm" />
-      </span>
-    </div>
-  </div> -->
   
   <div class="row u-aligncenter company-container">
 

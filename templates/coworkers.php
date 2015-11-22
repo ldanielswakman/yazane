@@ -20,15 +20,15 @@ $posts = get_posts( array(
       <div class="coworker-image"><img src="" alt="" /></div>
     </div>
     <div class="col-sm-4 col-xs-12 u-mb20 u-alignleft">
-      <h4 class="coworker-name">name</h4>
-      <p class="coworker-title small">title</p>
+      <h4 class="coworker-name"><?php pll_e('name'); ?></h4>
+      <p class="coworker-title small"><?php pll_e('title'); ?></p>
     </div>
     <div class="coworker-links col-sm-4 col-xs-12 u-alignright">
     </div>
   </div>
   <div class="row">
     <div class="col-sm-8 col-sm-offset-3 u-alignleft">
-      <p class="coworker-description small u-scrollable">description</p>
+      <p class="coworker-description small u-scrollable"><?php pll_e('description'); ?></p>
     </div>
   </div>
   <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>
@@ -38,17 +38,17 @@ $posts = get_posts( array(
   <div class="row u-aligncenter u-mb40">
     <div class="col-xs-12 actions">
       <span class="btn-group u-mr20 coworker-filtering">
-        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="coworker">all</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-filter="current">current</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-filter="past">past</a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-filter="coworker"><?php pll_e('filter_btn_all'); ?></a>
+        <a href="javascript:void(0)" class="btn btn-sm" data-filter="current"><?php pll_e('filter_btn_current'); ?></a>
+        <a href="javascript:void(0)" class="btn btn-sm" data-filter="past"><?php pll_e('filter_btn_past'); ?></a>
       </span>
       <span class="btn-group u-mr20 coworker-sorting">
-        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-sort="random">random</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-sort="name">by name</a>
-        <a href="javascript:void(0)" class="btn btn-sm" data-sort="title">by title</a>
+        <a href="javascript:void(0)" class="btn btn-primary btn-sm" data-sort="random"><?php pll_e('sort_btn_random'); ?></a>
+        <a href="javascript:void(0)" class="btn btn-sm" data-sort="name"><?php pll_e('sort_btn_name'); ?></a>
+        <a href="javascript:void(0)" class="btn btn-sm" data-sort="title"><?php pll_e('sort_btn_title'); ?></a>
       </span>
       <span class="btn-group coworker-search">
-        <input type="search" id="coworkersearch" placeholder="SEARCH..." class="btn btn-sm" />
+        <input type="search" id="coworkersearch" placeholder="<?php pll_e('search'); ?>..." class="btn btn-sm" />
       </span>
     </div>
   </div>

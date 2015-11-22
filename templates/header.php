@@ -5,8 +5,8 @@
   <div class="dialog-content">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3>BOOK A TOUR</h3>
-        <p>Do you want to use one of Yazane's excellent spaces for one of your events,  inquire here for more information.</p>
+        <h3><?php pll_e('book_a_tour'); ?></h3>
+        <p><?php pll_e('book_a_tour_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">
@@ -23,13 +23,13 @@
   <div class="dialog-content">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3>CONTACT US</h3>
-        <p>Are you interested in more info about Yazane, or want to join us as a coworker? Contact us here.</p>
+        <h3><?php pll_e('contact_us'); ?></h3>
+        <p><?php pll_e('contact_us_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 u-mt20">
-        <?php echo do_shortcode( '[contact-form-7 id="139" title="Contact Us"]' ); ?>
+        <?php echo do_shortcode( '[contact-form-7 id="139" title="Contact us"]' ); ?>
       </div>
     </div>
   </div>
@@ -41,8 +41,8 @@
   <div class="dialog-content">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3>HOST AN EVENT</h3>
-        <p>Do you want to use one of Yazane's excellent spaces for one of your events? Inquire here for more information.</p>
+        <h3><?php pll_e('host_event'); ?></h3>
+        <p><?php pll_e('host_event_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">

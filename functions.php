@@ -25,6 +25,7 @@ $roots_includes = array(
   'lib/shortcodes.php',      // Custom shortcodes
   'lib/attachments.php',     // Attachments plugin configuration
   'lib/wp_mail_smtp.php',    // STMP setup
+  'lib/translations.php',    // Theme string translations
 );
 
 foreach ($roots_includes as $file) {
