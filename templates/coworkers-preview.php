@@ -33,7 +33,7 @@ $posts = get_posts( array(
     </div>
   </div>
 
-  <div class="row u-alignleft">
+  <div class="row u-aligncenter">
     <?php
     foreach($posts as $post):
       $name = get_the_title( $post->ID );
@@ -43,8 +43,8 @@ $posts = get_posts( array(
 
       <div class="coworker col-sm-4 col-xs-6 u-mv20">
         <div class="coworker-image"><?php echo $image ?></div>
-        <h4 class="u-mt20"><?php echo $name ?></h4>
-        <p class="small"><?php echo $job_title ?></p>
+        <h4 class="u-mt20 u-truncate"><?php echo $name ?></h4>
+        <p class="small u-truncate"><?php echo $job_title ?></p>
       </div>
 
     <?php endforeach; ?>

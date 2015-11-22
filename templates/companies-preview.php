@@ -32,7 +32,7 @@ $posts = get_posts( array(
       <p>a random selection of companies at Yazane:</p>
     </div>
   </div>
-  <div class="row u-alignleft">
+  <div class="row u-aligncenter">
 
     <?php
     foreach($posts as $post):
@@ -42,7 +42,7 @@ $posts = get_posts( array(
 
       <div class="company col-sm-4 col-xs-6 u-mv20">
         <div class="company-image"><?php echo $image ?></div>
-        <h4 class="u-mt20"><?php echo $name ?></h4>
+        <h4 class="u-mt20 u-truncate"><?php echo $name ?></h4>
       </div>
 
     <?php endforeach; ?>

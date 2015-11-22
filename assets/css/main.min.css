@@ -373,6 +373,12 @@ input:focus, textarea:focus {
 .u-bordertop {
   border-top: 1px solid #dde;
 }
+.u-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .c-light {
   color: #ccd;
 }
