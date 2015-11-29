@@ -11,6 +11,9 @@ pll_register_string('Contact us dialog text','contact_us_dialog_text','yazane-th
 pll_register_string('Host an event','host_event','yazane-theme');
 pll_register_string('Host an event dialog text','host_event_dialog_text','yazane-theme');
 // Companies & Coworkers
+pll_register_string('Members','members','yazane-theme');
+pll_register_string('Members preview text','members_preview_text','yazane-theme');
+pll_register_string('Members preview action','members_preview_action','yazane-theme');
 pll_register_string('Name','name','yazane-theme');
 pll_register_string('Title','title','yazane-theme');
 pll_register_string('Description','description','yazane-theme');

@@ -692,20 +692,32 @@ nav .menu li.active a, nav .menu li.active .ion {
 nav .menu li.active a:hover, nav .menu li.active a:hover .ion {
   color: #fff;
 }
-nav .menu li[class*="ion-"]:before {
+nav .menu li[class*="ion-"]:before,
+nav .menu li.lang-item:before {
   display: inline-block;
   float: left;
+  width: 50px;
   padding: 18px 15px;
   font-size: 1.5em;
   color: #889;
   pointer-events: none;
+  text-align: center;
 }
-nav .menu li[class*="ion-"]:hover:before {
+nav .menu li[class*="ion-"]:hover:before,
+nav .menu li.lang-item:hover:before {
   color: #fff;
 }
 nav .menu a:hover, nav .menu a:focus {
   background-color: #7dadbc;
   color: #fff;
+}
+nav .menu li.lang-item {
+  opacity: 0.75;
+}
+nav .menu li.lang-item:before {
+  content: "\f4a8";
+  font-family: "Ionicons";
+  line-height: 1em;
 }
 nav.isExpanded {
   -webkit-transform: translateX(0);
@@ -1440,7 +1452,8 @@ figure.alignnone {
   nav .menu li {
     height: 45px;
   }
-  nav .menu li[class*="ion-"]:before {
+  nav .menu li[class*="ion-"]:before,
+  nav .menu li.lang-item:before {
     padding: 7px 15px;
   }
   nav .menu a {

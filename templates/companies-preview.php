@@ -48,7 +48,12 @@ $posts = get_posts( array(
     <?php endforeach; ?>
 
     <div class="col-xs-12 actions u-mt40 u-aligncenter">
-      <a href="/members/" class="btn u-ma5"><?php pll_e('all_companies_button'); ?></a>
+      <?php 
+      $id = get_page_by_path('members')->ID; // id of members page (EN)
+      $translated_id = pll_get_post($id, pll_current_language()); // id of translated page (EN)
+      $url = post_permalink($translated_id); // get permalink for translated id
+      ?>
+      <a href="<?php echo $url . '#page-companies' ?>" class="btn u-ma5"><?php echo strtoupper(pll__('all_companies_button')); ?></a>
     </div>
 
   </div>

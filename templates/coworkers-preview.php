@@ -28,8 +28,8 @@ $posts = get_posts( array(
 
   <div class="row">
     <div class="col-xs-12 u-mb40 u-aligncenter">
-      <h2>members</h2>
-      <p>a random selection of our members:</p>
+      <h2><?php echo strtoupper(pll__('members')); ?></h2>
+      <p><?php pll_e('members_preview_text'); ?></p>
     </div>
   </div>
 
@@ -50,7 +50,12 @@ $posts = get_posts( array(
     <?php endforeach; ?>
 
     <div class="col-xs-12 actions u-mt40 u-aligncenter">
-      <a href="members" class="btn u-ma5">see all members</a>
+      <?php 
+      $id = get_page_by_path('members')->ID; // id of members page (EN)
+      $translated_id = pll_get_post($id, pll_current_language()); // id of translated page (EN)
+      $url = post_permalink($translated_id); // get permalink for translated id
+      ?>
+      <a href="<?php echo $url ?>" class="btn u-ma5"><?php echo strtoupper(pll__('members_preview_action')); ?></a>
     </div>
   </div>
 

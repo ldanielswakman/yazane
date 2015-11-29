@@ -3,7 +3,10 @@
     <i class="ion-navicon ion-2x"></i>
     <i class="ion-close"></i>
   </a>
-  <a href="<?php echo site_url() ?>"><div class="logo"><?php image_tag("logo.png"); ?></div></a>
+  <? 
+  $pll_lang = (pll_current_language() != pll_default_language()) ? '/' . pll_current_language() : '';
+  ?>
+  <a href="<?php echo site_url( $pll_lang ) ?>"><div class="logo"><?php image_tag("logo.png"); ?></div></a>
 
   <?php wp_nav_menu() ?>
 
