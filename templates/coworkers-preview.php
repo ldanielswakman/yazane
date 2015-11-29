@@ -28,8 +28,8 @@ $posts = get_posts( array(
 
   <div class="row">
     <div class="col-xs-12 u-mb40 u-aligncenter">
-      <h2><?php echo strtoupper(pll__('members')); ?></h2>
-      <p><?php pll_e('members_preview_text'); ?></p>
+      <h2><?php echo (function_exists('pll__')) ? pll__('members') : __('Members'); ?></h2>
+      <p><?php echo (function_exists('pll__')) ? pll__('members_preview_text') : __('members_preview_text'); ?>:</p>
     </div>
   </div>
 
@@ -52,10 +52,10 @@ $posts = get_posts( array(
     <div class="col-xs-12 actions u-mt40 u-aligncenter">
       <?php 
       $id = get_page_by_path('members')->ID; // id of members page (EN)
-      $translated_id = pll_get_post($id, pll_current_language()); // id of translated page (EN)
+      $translated_id = (function_exists('pll_get_post') && function_exists('pll_current_language')) ? pll_get_post($id, pll_current_language()) : $id; // id of translated page (EN)
       $url = post_permalink($translated_id); // get permalink for translated id
       ?>
-      <a href="<?php echo $url ?>" class="btn u-ma5"><?php echo strtoupper(pll__('members_preview_action')); ?></a>
+      <a href="<?php echo $url ?>" class="btn u-ma5"><?php echo (function_exists('pll__')) ? strtoupper(pll__('members_preview_action')) : __('SEE ALL MEMBERS'); ?></a>
     </div>
   </div>
 

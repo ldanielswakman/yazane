@@ -28,8 +28,8 @@ $posts = get_posts( array(
 
   <div class="row">
     <div class="col-xs-12 u-mb40 u-aligncenter">
-      <h2><?php pll_e('companies_title'); ?></h2>
-      <p><?php pll_e('companies_preview_text'); ?>:</p>
+      <h2><?php echo (function_exists('pll__')) ? pll__('companies_title') : __('Companies'); ?></h2>
+      <p><?php echo (function_exists('pll__')) ? pll__('companies_preview_text') : __('companies_preview_text'); ?>:</p>
     </div>
   </div>
   <div class="row u-aligncenter">
@@ -50,10 +50,10 @@ $posts = get_posts( array(
     <div class="col-xs-12 actions u-mt40 u-aligncenter">
       <?php 
       $id = get_page_by_path('members')->ID; // id of members page (EN)
-      $translated_id = pll_get_post($id, pll_current_language()); // id of translated page (EN)
+      $translated_id = (function_exists('pll_get_post') && function_exists('pll_current_language')) ? pll_get_post($id, pll_current_language()) : $id; // id of translated page (EN)
       $url = post_permalink($translated_id); // get permalink for translated id
       ?>
-      <a href="<?php echo $url . '#page-companies' ?>" class="btn u-ma5"><?php echo strtoupper(pll__('all_companies_button')); ?></a>
+      <a href="<?php echo $url . '#page-companies' ?>" class="btn u-ma5"><?php echo (function_exists('pll__')) ? strtoupper(pll__('all_companies_button')) : __('SEE ALL COMPANIES'); ?></a>
     </div>
 
   </div>

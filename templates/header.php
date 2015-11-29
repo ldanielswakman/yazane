@@ -5,8 +5,8 @@
   <div class="dialog-content">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3><?php pll_e('book_a_tour'); ?></h3>
-        <p><?php pll_e('book_a_tour_dialog_text'); ?></p>
+        <h3><?php echo (function_exists('pll__')) ? pll__('book_a_tour') : __('book_a_tour'); ?></h3>
+        <p><?php echo (function_exists('pll__')) ? pll__('book_a_tour_dialog_text') : __('book_a_tour_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">
@@ -23,8 +23,8 @@
   <div class="dialog-content">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3><?php pll_e('contact_us'); ?></h3>
-        <p><?php pll_e('contact_us_dialog_text'); ?></p>
+        <h3><?php echo (function_exists('pll__')) ? pll__('contact_us') : __('contact_us'); ?></h3>
+        <p><?php echo (function_exists('pll__')) ? pll__('contact_us_dialog_text') : __('contact_us_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">
@@ -41,8 +41,8 @@
   <div class="dialog-content">
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h3><?php pll_e('host_event'); ?></h3>
-        <p><?php pll_e('host_event_dialog_text'); ?></p>
+        <h3><?php echo (function_exists('pll__')) ? pll__('host_event') : __('host_event'); ?></h3>
+        <p><?php echo (function_exists('pll__')) ? pll__('host_event_dialog_text') : __('host_event_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">

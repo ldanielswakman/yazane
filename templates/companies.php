@@ -13,9 +13,9 @@ $posts = get_posts( array(
       <div class="company-links u-mt30"></div>
     </div>
     <div class="col-sm-8 col-xs-12 u-mb20 u-alignleft">
-      <h4 class="company-name"><?php pll_e('name'); ?></h4>
-      <p class="company-field small"><?php pll_e('title'); ?></p>
-      <p class="company-description small u-scrollable u-mt20"><?php pll_e('description'); ?></p>
+      <h4 class="company-name"><?php echo (function_exists('pll__')) ? pll__('name') : __('name'); ?></h4>
+      <p class="company-field small"><?php echo (function_exists('pll__')) ? pll__('title') : __('title'); ?></p>
+      <p class="company-description small u-scrollable u-mt20"><?php echo (function_exists('pll__')) ? pll__('description') : __('description'); ?></p>
     </div>
   </div>
   <a href="javascript:void(0)" id="closeDialog" class="u-pinned-topright"><i class="ion ion-ios-close-empty ion-3x u-mr10"></i></a>
@@ -24,7 +24,7 @@ $posts = get_posts( array(
 <section id="page-companies" class="page-companies u-pv60">
   <div class="row u-mb40">
     <div class="col-xs-12 u-aligncenter">
-      <h4><?php echo strtoupper(pll__('companies_title')); ?></h4>
+      <h4><?php echo (function_exists('pll__')) ? strtoupper(pll__('companies_title')) : strtoupper(__('Companies')); ?></h4>
     </div>
   </div>
   

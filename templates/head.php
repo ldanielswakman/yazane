@@ -6,7 +6,7 @@
 
 	<title><?php wp_title('|', true, 'right'); ?></title>
 
-	<meta name="description" content="<?php pll_e('tagline') ?>" />
+	<meta name="description" content="<?php echo (function_exists('pll__')) ? pll__('tagline') : ''; ?>" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="L Daniel Swakman, www.ldaniel.eu" />
 	<meta charset="utf-8" />
