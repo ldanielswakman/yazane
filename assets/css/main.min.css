@@ -972,15 +972,15 @@ blockquote sup {
   min-height: 90vh;
   background-image: url('../img/background-workspace.jpg');
 }
-#mailing_list {
+#mailing-list {
   min-height: 60vh;
   background-color: #7dadbc;
   color: #fff;
 }
-#mailing_list input {
+#mailing-list input {
   background-color: rgba(255, 255, 255, 0.9);
 }
-#mailing_list input:hover, #mailing_list input:focus {
+#mailing-list input:hover, #mailing-list input:focus {
   background-color: #fff;
   border-bottom-color: #fff;
 }
