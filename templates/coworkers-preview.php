@@ -42,7 +42,7 @@ $posts = get_posts( array(
       ?>
 
       <div class="coworker col-sm-4 col-xs-6 u-mv20">
-        <div class="coworker-image"><?php echo $image ?></div>
+        <div class="coworker-image"><?php echo (strlen($image) > 0) ? $image : '<i class="placeholder ion ion-ios-person"></i>' ?></div>
         <h4 class="u-mt20 u-truncate"><?php echo $name ?></h4>
         <p class="small u-truncate"><?php echo $job_title ?></p>
       </div>
