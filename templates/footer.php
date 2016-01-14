@@ -29,7 +29,7 @@
         </script>
         <noscript>[Turn on JavaScript to see the email address]</noscript>
       </h5>
-      <a href="#" class="toggle_contact_us btn u-mt20"><i class="ion ion-email ion-15x u-mr10"></i><?php echo (function_exists('pll__')) ? pll__('contact_us_button') : __('contact_us_button'); ?></a>
+      <a href="#" class="toggle_contact_us btn u-mt20"><i class="ion ion-email ion-15x u-mr10"></i><?php echo (function_exists('pll__')) ? pll__('contact_us') : __('contact_us'); ?></a>
     </div>
     <div class="col-sm-4 u-pv20">
       <a href="https://twitter.com/yazanecowork" class="btn btn-circle btn-white u-mr10" target="_blank"><i class="ion-social-twitter ion-fw ion-2x"></i></a>
