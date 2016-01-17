@@ -1,3 +1,7 @@
+<?php
+$lang = (function_exists('pll_current_language')) ? pll_current_language() : null;
+?>
+
 <!-- Contact forms -->
 <a href="javascript:void(0)" id="book_a_tour_dialog_mask" class="dialog_mask"></a>
 <dialog id="book_a_tour">
@@ -11,7 +15,10 @@
     </div>
     <div class="row">
       <div class="col-sm-12 u-mt20">
-        <?php echo do_shortcode( '[contact-form-7 id="32" title="Book A Tour"]' ); ?>
+        <?php
+        $form_id = ($lang == 'tr') ? '454' : '32';
+        echo do_shortcode( '[contact-form-7 id="' . $form_id . '"]' ); 
+        ?>
       </div>
     </div>
   </div>
@@ -29,7 +36,10 @@
     </div>
     <div class="row">
       <div class="col-sm-12 u-mt20">
-        <?php echo do_shortcode( '[contact-form-7 id="139" title="Contact us"]' ); ?>
+        <?php
+        $form_id = ($lang == 'tr') ? '455' : '139';
+        echo do_shortcode( '[contact-form-7 id="' . $form_id . '"]' ); 
+        ?>
       </div>
     </div>
   </div>
@@ -47,7 +57,10 @@
     </div>
     <div class="row">
       <div class="col-sm-12 u-mt20">
-        <?php echo do_shortcode( '[contact-form-7 id="154" title="Host an Event"]' ); ?>
+        <?php
+        $form_id = ($lang == 'tr') ? '456' : '154';
+        echo do_shortcode( '[contact-form-7 id="' . $form_id . '"]' ); 
+        ?>
       </div>
     </div>
   </div>
