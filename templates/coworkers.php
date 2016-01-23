@@ -49,6 +49,9 @@ $posts = get_posts( array(
       </span>
       <span class="btn-group coworker-search">
         <input type="search" id="coworkersearch" placeholder="<?php echo (function_exists('pll__')) ? pll__('search') : __('search'); ?>..." class="btn btn-sm" />
+        <a id="coworkersearch_clear" href="javascript:void(0)" class="btn btn-sm btn-outline u-pinned-topright" style="top: 0; right: 0; background-color: #fff; z-index: 2;">
+          <i class="ion ion-close"></i>
+        </a>
       </span>
     </div>
   </div>

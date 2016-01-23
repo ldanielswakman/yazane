@@ -1144,6 +1144,14 @@ blockquote sup {
 .page-companies .company-search input:focus {
   width: 250px;
 }
+.page-coworkers .coworker-search input + #coworkersearch_clear,
+.page-companies .company-search input + #coworkersearch_clear {
+  display: none;
+}
+.page-coworkers .coworker-search input.hasContent + #coworkersearch_clear,
+.page-companies .company-search input.hasContent + #coworkersearch_clear {
+  display: inline-block;
+}
 .page-coworkers .coworker-search,
 .page-companies .company-search {
   position: relative;
