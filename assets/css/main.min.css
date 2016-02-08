@@ -877,18 +877,18 @@ aside .lang-switcher a:hover {
   border: 1px solid #7dadbc;
   color: #fff;
 }
-#intro {
+.intro {
   height: 60vh;
   background-image: url('../img/background-working.jpg');
 }
-#intro .background:before, #intro .background:after {
+.intro .background:before, .intro .background:after {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   z-index: 0;
 }
-#intro .background:before {
+.intro .background:before {
   top: 0;
   height: 40%;
   background: -webkit-linear-gradient(top,  rgba(255, 255, 255, 0.5),  transparent);
@@ -896,7 +896,7 @@ aside .lang-switcher a:hover {
   background: -o-linear-gradient(top,  rgba(255, 255, 255, 0.5),  transparent);
   background: linear-gradient(top,  rgba(255, 255, 255, 0.5),  transparent);
 }
-#intro .background:after {
+.intro .background:after {
   bottom: 0;
   height: 40%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -905,7 +905,7 @@ aside .lang-switcher a:hover {
   background: -o-linear-gradient(top,  transparent,  rgba(0, 0, 0, 0.7));
   background: linear-gradient(top,  transparent,  rgba(0, 0, 0, 0.7));
 }
-#tagline {
+.tagline {
   min-height: 40vh;
 }
 blockquote {
@@ -924,23 +924,30 @@ blockquote sup {
   font-size: 0.6em;
   color: #7dadbc;
 }
-#about {
-  background: #f5f5f5;
-  z-index: 3;
-}
-#about .usp i {
+.c-theme {
   color: #7dadbc;
 }
-#inbetween1 {
+.bg-white {
+  background-color: #fff;
+}
+.bg-lightest {
+  background: #f5f5f5;
+}
+.bg-theme {
+  background-color: #7dadbc;
+  color: #fff;
+}
+.bg-inbetween1 {
   min-height: 80vh;
   background-image: url('../img/background-space.jpg');
 }
-#events {
-  background-color: #fff;
-}
-#inbetween2 {
+.bg-inbetween2 {
   min-height: 80vh;
   background-image: url('../img/background-corneroffice.jpg');
+}
+.inbetween3 {
+  min-height: 90vh;
+  background-image: url('../img/background-workspace.jpg');
 }
 #coworkers .coworker {
   height: 120px;
@@ -980,10 +987,12 @@ blockquote sup {
   height: 80px;
   margin-right: 20px;
 }
+#uyeler .coworker-image img,
 #members .coworker-image img {
   min-width: 150px;
   min-height: 150px;
 }
+#uyeler .coworker-image .placeholder,
 #members .coworker-image .placeholder {
   display: block;
   width: 150px;
@@ -996,32 +1005,31 @@ blockquote sup {
   color: #7dadbc;
   font-size: 5em;
 }
+#uyeler .coworker p.small,
 #members .coworker p.small {
   min-height: 21px;
 }
-#inbetween3 {
-  min-height: 90vh;
-  background-image: url('../img/background-workspace.jpg');
-}
-#mailing_list {
+#mailing-list {
   min-height: 60vh;
   background-color: #7dadbc;
   color: #fff;
 }
-#mailing_list input {
+.bg-theme input,
+#mailing-list input {
   background-color: rgba(255, 255, 255, 0.9);
 }
-#mailing_list input:hover, #mailing_list input:focus {
+.bg-theme input:hover, .bg-theme input:focus,
+#mailing-list input:hover, #mailing-list input:focus {
   background-color: #fff;
   border-bottom-color: #fff;
 }
-#location {
+#harita, #location {
   min-height: 70vh;
 }
-#location #map-canvas {
+#harita #map-canvas, #location #map-canvas {
   min-height: 70vh;
 }
-#location #map-canvas img {
+#harita #map-canvas img, #location #map-canvas img {
   max-width: none;
 }
 #contact {

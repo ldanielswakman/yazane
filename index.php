@@ -8,12 +8,10 @@
     'order' => 'ASC',
     'posts_per_page' => -1
   ));
-  $visiblepages = [];
   while ( $homepage_posts->have_posts() ) : $homepage_posts->the_post();
-    // adding visible sections to array
-    $visible = get_post_meta( $post->ID, 'section_nav_visible', true );
-    if ($visible != 'no') { array_push($visiblepages, $post->ID); }
+    echo "<section id=" . $post->post_name . ">";
     the_content();
+    echo "</section>";
   endwhile;  
   ?>
 
@@ -21,11 +19,12 @@
 
 <?php
 // outputs in-page nav menu
-if(!empty($visiblepages)) {
-  echo '<aside><ul id="page-menu">';
-  foreach ($visiblepages as $visiblepage) {
-    echo '<li><a href="#' . sanitize_title(get_the_title($visiblepage)) . '"' . $class . '><span class="descr">' . strtolower(get_the_title($visiblepage)) . '</span></a></li>';
-  }
-  echo '</ul></aside>';
-}
+echo '<aside><ul id="page-menu">';
+while ( $homepage_posts->have_posts() ) : $homepage_posts->the_post();
+  $visible = get_post_meta( $post->ID, 'section_nav_visible', true );
+  if ($visible != 'no'):
+    echo '<li><a href="#' . $post->post_name . '"' . $class . '><span class="descr">' . strtolower(get_the_title()) . '</span></a></li>';
+  endif;
+endwhile;
+echo '</ul></aside>';
 ?>
