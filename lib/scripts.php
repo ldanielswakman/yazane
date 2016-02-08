@@ -25,7 +25,7 @@ function roots_scripts() {
       'ionicons' => get_template_directory_uri() . '/assets/css/ionicons.min.css',
       'css'       => get_template_directory_uri() . '/assets/css/main.min.css',
       'js'        => get_template_directory_uri() . '/assets/js/scripts.min.js',
-      'modernizr' => get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js',
+      // 'modernizr' => get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js',
       'jquery'    => get_template_directory_uri() . '/assets/js/vendor/jquery.min.js',
       'isotope'   => get_template_directory_uri() . '/assets/js/vendor/isotope.pkgd.min.js',
       'smoothscoll' => get_template_directory_uri() . '/assets/js/vendor/jquery.smooth-scroll.min.js'
