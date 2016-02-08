@@ -50,12 +50,7 @@ $posts = get_posts( array(
     <?php endforeach; ?>
 
     <div class="col-xs-12 actions u-mt40 u-aligncenter">
-      <?php 
-      $id = get_page_by_path('members')->ID; // id of members page (EN)
-      $translated_id = (function_exists('pll_get_post') && function_exists('pll_current_language')) ? pll_get_post($id, pll_current_language()) : $id; // id of translated page (EN)
-      $url = post_permalink($translated_id); // get permalink for translated id
-      ?>
-      <a href="<?php echo $url ?>" class="btn u-ma5"><?php echo (function_exists('pll__')) ? strtoupper(pll__('members_preview_action')) : __('SEE ALL MEMBERS'); ?></a>
+      <a href="<?php echo getPageENtoPLL('members', 'url') ?>" class="btn u-ma5"><?php echo (function_exists('pll__')) ? strtoupper(pll__('members_preview_action')) : __('SEE ALL MEMBERS'); ?></a>
     </div>
   </div>
 

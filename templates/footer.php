@@ -8,11 +8,12 @@
       <br />
       <?php 
       // shows terms and conditions link if such a page exists
-      $tnc_page = get_page_by_path( 'terms-and-conditions' );
-      if ($tnc_page->ID != 0):
+      if (get_page_by_path( 'terms-and-conditions' )->ID != 0):
+        echo "<a href=" . getPageENtoPLL('terms-and-conditions', 'url') . ">";
+        echo getPageENtoPLL('terms-and-conditions', 'title');
+        echo "</a>";
+      endif; 
       ?>
-      <a href="<?php echo get_permalink( get_page_by_path( 'terms-and-conditions' ) ) ?>"><?php echo get_page_by_path( 'terms-and-conditions' )->post_title ?></a>
-      <?php endif; ?>
     </div>
     <div class="col-sm-4">
       <h4><?php echo (function_exists('pll__')) ? pll__('address_title') : __('address_title'); ?></h4>
