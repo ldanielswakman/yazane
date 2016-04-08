@@ -18,7 +18,7 @@
     <div class="col-sm-4">
       <h4><?php echo (function_exists('pll__')) ? pll__('address_title') : __('address_title'); ?></h4>
       <h5>
-        Tophane-İskele Cad. no:12 k:1 Karaköy<br />
+        İstiklal Cad. Kallavi Sokak No:1 Kat:3 34430 Beyoğlu/İstanbul<br />
         t: 0212 293 79 00<br />
         e:
         <script>

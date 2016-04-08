@@ -466,6 +466,14 @@ input:focus, textarea:focus {
   border-color: transparent;
   color: #333;
 }
+.btn-dark-outline {
+  border-color: #667;
+  color: #667;
+}
+.btn-dark-outline:hover, .btn-dark-outline:focus {
+  background-color: #667;
+  color: #fff;
+}
 .btn-circle {
   height: 54px;
   width: 54px;
@@ -945,7 +953,7 @@ blockquote sup {
   min-height: 80vh;
   background-image: url('../img/background-corneroffice.jpg');
 }
-.inbetween3 {
+.bg-inbetween3 {
   min-height: 90vh;
   background-image: url('../img/background-workspace.jpg');
 }
