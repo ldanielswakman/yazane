@@ -887,7 +887,7 @@ aside .lang-switcher a:hover {
 }
 .intro {
   height: 60vh;
-  background-image: url('../img/background-working.jpg');
+  background-image: url('../img/background-istiklal.jpg');
 }
 .intro .background:before, .intro .background:after {
   content: "";
@@ -947,15 +947,15 @@ blockquote sup {
 }
 .bg-inbetween1 {
   min-height: 80vh;
-  background-image: url('../img/background-space.jpg');
+  background-image: url('../img/background-laptopcup.jpg');
 }
 .bg-inbetween2 {
   min-height: 80vh;
-  background-image: url('../img/background-corneroffice.jpg');
+  background-image: url('../img/background-meetingroom.jpg');
 }
 .bg-inbetween3 {
   min-height: 90vh;
-  background-image: url('../img/background-workspace.jpg');
+  background-image: url('../img/background-objects.jpg');
 }
 #coworkers .coworker {
   height: 120px;
