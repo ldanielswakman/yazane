@@ -137,6 +137,9 @@ input:focus, textarea:focus {
 .u-mr80 {
   margin-right: 80px;
 }
+.u-mt0 {
+  margin-top: 0px;
+}
 .u-mt5 {
   margin-top: 5px;
 }
@@ -1534,6 +1537,23 @@ figure.alignnone {
   width: 33.33333333%}
 }
 
+
+
+/* --- Element: Blog Tags --- */
+.tags a {
+  display: inline-block;
+  background-color: #eef;
+  margin-right: 10px;
+  padding: 2px 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.tags a:hover {
+  background-color: #7dadbc;
+  color: #fff;
+}
 
 
 
