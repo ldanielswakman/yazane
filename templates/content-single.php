@@ -14,9 +14,14 @@
     <section class="u-pt40 u-pb60">
 
       <div class="row">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 c-light u-pb30">
+        <div class="col-xs-6 col-sm-4 col-sm-offset-1 c-light u-pb30">
           <?php // get_template_part('templates/entry-meta'); ?>
           <?php the_date(); ?>
+        </div>
+        <div class="col-xs-6 col-sm-6 u-pb30 u-alignright">
+          <a href="#" class="btn btn-sm btn-share-twitter"><i class="ion ion-social-twitter ion-15x"></i></a>
+          <a href="#" class="btn btn-sm btn-share-facebook"><i class="ion ion-social-facebook ion-15x u-mh5"></i></a>
+          <a href="#" class="btn btn-sm btn-share-linkedin"><i class="ion ion-social-linkedin ion-15x"></i></a>
         </div>
       </div>
     

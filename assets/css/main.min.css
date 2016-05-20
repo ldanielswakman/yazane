@@ -210,6 +210,10 @@ input:focus, textarea:focus {
   margin-top: 80px;
   margin-bottom: 80px;
 }
+.u-mh5 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .u-ma5 {
   margin: 5px;
 }
@@ -475,6 +479,36 @@ input:focus, textarea:focus {
 }
 .btn-dark-outline:hover, .btn-dark-outline:focus {
   background-color: #667;
+  color: #fff;
+}
+.btn-share-twitter {
+  background-color: #eef;
+  border-color: transparent;
+  color: #55acee;
+}
+.btn-share-twitter:hover {
+  background-color: #55acee;
+  border-color: transparent;
+  color: #fff;
+}
+.btn-share-facebook {
+  background-color: #eef;
+  border-color: transparent;
+  color: #3b5999;
+}
+.btn-share-facebook:hover {
+  background-color: #3b5999;
+  border-color: transparent;
+  color: #fff;
+}
+.btn-share-linkedin {
+  background-color: #eef;
+  border-color: transparent;
+  color: #0077B5;
+}
+.btn-share-linkedin:hover {
+  background: #0077B5;
+  border-color: transparent;
   color: #fff;
 }
 .btn-circle {
