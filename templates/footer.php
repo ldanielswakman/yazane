@@ -33,9 +33,10 @@
       <a href="#" class="toggle_contact_us btn u-mt20"><i class="ion ion-email ion-15x u-mr10"></i><?php echo (function_exists('pll__')) ? pll__('contact_us') : __('contact_us'); ?></a>
     </div>
     <div class="col-sm-4 u-pv20">
-      <a href="https://twitter.com/yazanecowork" class="btn btn-circle btn-white u-mr10" target="_blank"><i class="ion-social-twitter ion-fw ion-2x"></i></a>
-      <a href="https://facebook.com/YazaneIstanbul" class="btn btn-circle btn-white u-mr10" target="_blank"><i class="ion-social-facebook ion-fw ion-2x"></i></a>
-      <a href="http://instagram.com/yazanecowork" class="btn btn-circle btn-white" target="_blank"><i class="ion-social-instagram ion-fw ion-2x"></i></a>
+      <a href="https://twitter.com/yazanecowork" class="btn btn-circle btn-white u-mh5" target="_blank"><i class="ion-social-twitter ion-fw ion-2x"></i></a>
+      <a href="https://facebook.com/YazaneIstanbul" class="btn btn-circle btn-white u-mh5" target="_blank"><i class="ion-social-facebook ion-fw ion-2x"></i></a>
+      <a href="http://instagram.com/yazanecowork" class="btn btn-circle btn-white u-mh5" target="_blank"><i class="ion-social-instagram ion-fw ion-2x"></i></a>
+      <a href="https://plus.google.com/+YazaneCoworkingİstanbul" class="btn btn-circle btn-white u-mh5" target="_blank"><i class="ion-social-googleplus ion-fw ion-2x"></i></a>
 
     </div>
   </div>
