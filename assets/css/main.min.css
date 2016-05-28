@@ -984,15 +984,15 @@ blockquote sup {
 }
 .bg-inbetween1 {
   min-height: 80vh;
-  background-image: url('../img/background-laptopcup.jpg');
+  background-image: url('../img/background-entrance.jpg');
 }
 .bg-inbetween2 {
   min-height: 80vh;
-  background-image: url('../img/background-meetingroom.jpg');
+  background-image: url('../img/background-space.jpg');
 }
 .bg-inbetween3 {
   min-height: 90vh;
-  background-image: url('../img/background-objects.jpg');
+  background-image: url('../img/background-pencils.jpg');
 }
 #coworkers .coworker {
   height: 120px;
