@@ -16,6 +16,8 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4 col-sm-offset-1 c-light u-pb30">
           <?php // get_template_part('templates/entry-meta'); ?>
+          <?php the_author() ?>
+          &middot;
           <?php the_date(); ?>
         </div>
         <div class="col-xs-6 col-sm-6 u-pb30 u-alignright">

@@ -30,7 +30,7 @@ Template Name: Blog Index
           <a href="<?php the_permalink() ?>" class="u-block">
             <?php // print "(" . ($posts_query->current_post+1) ." of ". $posts_query->post_count . ")"; ?>
             <h4><big><?php the_title() ?></big></h4>
-            <p class="c-light u-mb20 u-mt0"><small><?php the_date('d F Y') ?></small></p>
+            <p class="c-light u-mb20 u-mt0"><small><?php the_author() ?> &middot; <?php the_date('d F Y') ?></small></p>
             <p style="line-height: 1.25em;"><small class="c-medium"><?php the_excerpt('') ?></small></p>
           </a>
 
