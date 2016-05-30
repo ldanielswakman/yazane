@@ -39,6 +39,8 @@ if (function_exists('pll_register_string')) {
   pll_register_string('Blog','blog','yazane-theme');
   pll_register_string('No blog posts','no_blog_posts_found','yazane-theme');
   pll_register_string('Read article','read_article','yazane-theme');
+  // Homepage follow button
+  pll_register_string('Follow us on FB','fb_follow_us','yazane-theme');
 }
 
 // Obtains a translated page for a given path

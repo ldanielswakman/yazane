@@ -32,7 +32,7 @@
 <aside class="floatingaction u-fixed-bottomright isHidden" data-appear-ypos="500" data-disappear-ypos="3000">
   <a href="https://facebook.com/YazaneIstanbul" target="_blank" class="btn btn-primary btn-lg" style="background-color: #3b5999;">
     <i class="ion ion-social-facebook u-mr10"></i>
-    Like us on Facebook!
+    <?php echo (function_exists('pll__')) ? pll__('fb_follow_us') : __('fb_follow_us'); ?>
     <i class="ion ion-chevron-right u-ml10"></i>
   </a>
 </aside>
