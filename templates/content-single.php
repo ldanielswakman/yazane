@@ -2,7 +2,7 @@
 
   <article <?php post_class(); ?>>
 
-    <section id="page-hero" class="parallax" style="background-image: url('/yazane/wp-content/themes/yazane/assets/img/background-woodpanels.jpg');">
+    <section id="page-hero" class="parallax" style="background-image: url('/wp-content/themes/yazane/assets/img/background-woodpanels.jpg');">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1 u-pv80 u-aligncenter">
           <h3 class="u-mb20"><?php echo function_exists('pll__') ? pll__('blog') : 'BLOG'; ?></h3>
@@ -27,7 +27,7 @@
         </div>
       </div>
     
-      <div class="row">
+      <div class="blog-article row">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
           <?php echo wpautop(get_the_content()); ?>
         </div>

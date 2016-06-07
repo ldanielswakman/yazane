@@ -1636,3 +1636,52 @@ figure.alignnone {
   -moz-transform: translateY(60px);
   transform: translateY(60px);
 }
+
+
+.blog-article p + h4 {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+.blog-article blockquote {
+  font-style: italic;
+  font-size: 1.25em;
+  margin: 1em 0 0.5em 1em;
+  padding: 0 0 0 1em;
+  border-left: 2px solid #eef;
+  color: #7dadbc;
+}
+.blog-article cite {
+  display: block;
+  margin-left: 0.5em;
+  font-size: 0.8em;
+}
+.blog-article cite:before {
+  content: "–";
+  margin-right: 0.25em;
+}
+.blog-article img[class*="size-"] {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  margin: 1em auto 2em;
+}
+.blog-article img.size-medium {
+  max-width: 60%;
+}
+.blog-article img.size-small {
+  max-width: 30%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .blog-article img.size-medium {
+    max-width: 100%;
+  }
+  .blog-article img.size-small {
+    max-width: 60%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .blog-article img.size-small {
+    max-width: 80%;
+  }
+}
