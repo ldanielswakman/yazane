@@ -38,6 +38,9 @@
         <div class="col-xs-12 col-sm-10 col-sm-offset-1 c-light">
           <div class="tags"><?php the_tags('', ''); ?></div>
         </div>
+        <div class="col-xs-12">
+          <hr class="hr--blog">
+        </div>
       </div>
 
       <div class="row u-mt60">

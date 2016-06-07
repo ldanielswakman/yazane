@@ -1685,3 +1685,10 @@ figure.alignnone {
     max-width: 80%;
   }
 }
+
+.hr--blog {
+  display: block;
+  max-width: 40%;
+  margin: 2em auto;
+  border-bottom: 2px solid #dde;
+}
