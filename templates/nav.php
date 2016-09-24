@@ -1,5 +1,5 @@
-<? $site_status = 'farewell' ?>
-<? if($site_status != 'farewell') : ?>
+<? $site_status = 'farewell'; ?>
+<? if($site_status !== 'farewell') : ?>
   <nav>
     <a href="javascript:void(0)" id="nav-menu-toggle">
       <i class="ion-navicon ion-2x"></i>
