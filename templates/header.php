@@ -31,7 +31,7 @@ $lang = (function_exists('pll_current_language')) ? pll_current_language() : nul
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
         <h3><?php echo (function_exists('pll__')) ? pll__('contact_us') : __('contact_us'); ?></h3>
-        <p><?php echo (function_exists('pll__')) ? pll__('contact_us_dialog_text') : __('contact_us_dialog_text'); ?></p>
+        <p><?php // echo (function_exists('pll__')) ? pll__('contact_us_dialog_text') : __('contact_us_dialog_text'); ?></p>
       </div>
     </div>
     <div class="row">

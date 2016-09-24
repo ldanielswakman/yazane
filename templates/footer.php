@@ -1,3 +1,6 @@
+<? $site_status = 'farewell'; ?>
+<? if ($site_status != 'farewell') : ?>
+
 <footer id="contact">
   <div class="row u-pt60 u-pb80 u-aligncenter">
     <div class="col-sm-4">
@@ -59,3 +62,5 @@
   </div>
 
 </footer>
+
+<? endif ?>
