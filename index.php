@@ -13,9 +13,9 @@
       // site_url('/');
       if (function_exists('pll_current_language')) {
         if (pll_current_language() == 'tr') {
-          echo '<a href="' . site_url('en') . '" class="btn btn-outline">EN</a>';
+          echo '<a href="' . site_url('en') . '" class="btn btn-white">EN</a>';
         } else {
-          echo '<a href="' . site_url() . '" class="btn btn-outline">TR</a>';
+          echo '<a href="' . site_url() . '" class="btn btn-white">TR</a>';
         }
       }
       // if (function_exists('pll_current_language') && function_exists('pll_default_language')) {
