@@ -68,7 +68,7 @@
   <div class="u-aligncenter u-pv30">
 
 
-    <a href="#" class="toggle_contact_us btn u-mt20 u-mr10">
+    <a href="mailto:info@yazane.com.tr" target="_blank" class="btn u-mt20 u-mr10"> <!-- toggle_contact_us  -->
       <i class="ion ion-email ion-15x u-mr10"></i>
       <?php echo function_exists('pll__') ? pll__('contact_us') : 'Contact us'; ?>
     </a>

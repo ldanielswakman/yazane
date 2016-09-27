@@ -1,7 +1,9 @@
 <?php
 $lang = (function_exists('pll_current_language')) ? pll_current_language() : null;
+$site_status = 'farewell';
 ?>
 
+<?php if($site_status != 'farewell') : ?>
 <!-- Contact forms -->
 <a href="javascript:void(0)" id="book_a_tour_dialog_mask" class="dialog_mask"></a>
 <dialog id="book_a_tour">
@@ -65,5 +67,6 @@ $lang = (function_exists('pll_current_language')) ? pll_current_language() : nul
     </div>
   </div>
 </dialog>
+<?php endif; ?>
 
 <?php get_template_part('templates/nav'); ?>
